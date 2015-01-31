@@ -1,0 +1,66 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+MikrotikProxyLogger
+</name>
+</assembly>
+<members>
+<member name="M:Mikrotik_Proxy_Logger.Global_Functions.serviceControl(System.Int32)">
+	<summary>
+ Sends a command to the service.
+ </summary>
+	<param name="Command">0 = Stop, 1 = Start, 2 = Reestart</param>
+	<returns>0 = Success, Other output indicates an error</returns>
+	<remarks></remarks>
+</member><member name="M:Mikrotik_Proxy_Logger.Global_Functions.ShowMsg(System.Int32,System.String,System.String,System.String,System.Int32)">
+	<summary>
+ A call to a message box with the specified conditions.
+ </summary>
+	<param name="Type">The type of the message to be shown. 0=Information, 1=Warning, 2=Error, 3=Question</param>
+	<param name="Title">The title of the message box window</param>
+	<param name="Text">The text should be displayed in the message</param>
+	<param name="Code">The code of the message, used for debugging purposes</param>
+	<param name="Buttons">The number and type of buttons. 1=Only OK button, 2=Yes/No buttons, 3=OK/Cancel buttons</param>
+	<returns>Returns 1 if clicked OK, or Yes, 0 if clicked No or Cancel</returns>
+	<remarks></remarks>
+</member><member name="M:Mikrotik_Proxy_Logger.Global_Functions.DisableApplicationMenus(System.Int32)">
+	<summary>
+ Disable/enable all meuns except Setup menu
+ </summary>
+	<param name="Status">0=disable mode, 1=enable mode</param>
+	<remarks></remarks>
+</member><member name="M:Mikrotik_Proxy_Logger.Global_Functions.WriteFile(System.String,System.String)">
+	<summary>
+ Function to write information to file and return the result.
+ </summary>
+	<param name="FileName">The full path and name of the file we want to create</param>
+	<param name="Text">The data that we want to write in the file</param>
+	<returns>0 as success, error message when fail</returns>
+	<remarks></remarks>
+</member><member name="M:Mikrotik_Proxy_Logger.CheckPrereqs.checkConfig">
+	<summary>
+ Checks the configuration of the system, if no configuration file found, then we will switch to prerequisites check and assume this is the first run.
+ </summary>
+	<returns>0 for success, -1 for failure</returns>
+	<remarks></remarks>
+</member><member name="P:Mikrotik_Proxy_Logger.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Mikrotik_Proxy_Logger.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:Mikrotik_Proxy_Logger.My.Resources.Resources.Download_Transmission_2_50_Final_for_Mac_OS_X_2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:Mikrotik_Proxy_Logger.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

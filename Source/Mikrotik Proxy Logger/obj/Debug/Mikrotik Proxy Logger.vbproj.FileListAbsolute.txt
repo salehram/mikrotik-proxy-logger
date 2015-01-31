@@ -1,0 +1,12 @@
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\bin\Debug\Mikrotik Proxy Logger.exe
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\bin\Debug\Mikrotik Proxy Logger.pdb
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\bin\Debug\Mikrotik Proxy Logger.xml
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\obj\Debug\Mikrotik_Proxy_Logger.frmDBConnect.resources
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\obj\Debug\Mikrotik_Proxy_Logger.frmMain.resources
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\obj\Debug\Mikrotik_Proxy_Logger.frmSingleUserReport_Config.resources
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\obj\Debug\Mikrotik_Proxy_Logger.Resources.resources
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\obj\Debug\Mikrotik Proxy Logger.vbproj.GenerateResource.Cache
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\obj\Debug\Mikrotik Proxy Logger.exe
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\obj\Debug\Mikrotik Proxy Logger.xml
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\obj\Debug\Mikrotik Proxy Logger.pdb
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\obj\Debug\Mikrotik_Proxy_Logger.frmResolveHosts.resources

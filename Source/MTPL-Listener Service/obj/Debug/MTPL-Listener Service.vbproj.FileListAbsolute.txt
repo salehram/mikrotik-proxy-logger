@@ -1,0 +1,23 @@
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\MTPL-Listener Service\bin\Debug\MTPL-Listener Service.exe
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\MTPL-Listener Service\bin\Debug\MTPL-Listener Service.pdb
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\MTPL-Listener Service\bin\Debug\MTPL-Listener Service.xml
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\MTPL-Listener Service\obj\Debug\MTPL_Listener_Service.MTPL_Listener.resources
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\MTPL-Listener Service\obj\Debug\MTPL_Listener_Service.Resources.resources
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\MTPL-Listener Service\obj\Debug\MTPL-Listener Service.vbproj.GenerateResource.Cache
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\MTPL-Listener Service\obj\Debug\MTPL-Listener Service.exe
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\MTPL-Listener Service\obj\Debug\MTPL-Listener Service.xml
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\MTPL-Listener Service\obj\Debug\MTPL-Listener Service.pdb
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\bin\Debug\MTPL-Listener Service.exe.manifest
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\bin\Debug\MTPL-Listener Service.application
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\bin\Debug\MTPL-Listener Service.exe
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\bin\Debug\MTPL-Listener Service.pdb
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\bin\Debug\MTPL-Listener Service.xml
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\obj\Debug\MTPL_Listener_Service.MTPL_Listener.resources
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\obj\Debug\MTPL_Listener_Service.Resources.resources
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\obj\Debug\MTPL_Listener_Service.ProjectInstaller.resources
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\obj\Debug\MTPL-Listener Service.vbproj.GenerateResource.Cache
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\obj\Debug\MTPL-Listener Service.exe.manifest
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\obj\Debug\MTPL-Listener Service.application
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\obj\Debug\MTPL-Listener Service.exe
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\obj\Debug\MTPL-Listener Service.xml
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\obj\Debug\MTPL-Listener Service.pdb
