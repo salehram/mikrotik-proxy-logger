@@ -1,7 +1,14 @@
 # Mikrotik Proxy Logger
 http://mikrotik-proxy-logger.is-linux.com
 
-This software is aiming to fulfill all the requirements from such application, I have seen many applications like this, but each one is having a major disadvantage, such as limited in reporting functionality, or being cache based software (meaning you need to MANUALLY import the logs from the Mikrotik device EVERYDAY), or being a Linux dependent only, or also being a central application, where it can only be ran from one location everytime…
+Current version: 0.0.2a - Download from "release" on top of the page
+
+**Version 0.0.2a:
+* SERVICE: Service can now grab "Accounting" data to generate reports for bandwidth usage.
+* SERVICE: Re-written the service code to be more error free as there was some major bug in the previous code.
+* GUI: Repositioned some menu items to be more logical
+
+This software is aiming to fulfil all the requirements from such application, I have seen many applications like this, but each one is having a major disadvantage, such as limited in reporting functionality, or being cache based software (meaning you need to MANUALLY import the logs from the Mikrotik device EVERYDAY), or being a Linux dependent only, or also being a central application, where it can only be ran from one location everytime…
 
 The idea of this software will try to fix all the above (and many other) issues, so we will have:
 
