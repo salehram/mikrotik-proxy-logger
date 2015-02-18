@@ -10,6 +10,7 @@ Module Globals
     Public DB_Name As String 'string to store the name of the database
     Public DB_Sources As DataTable 'a variable to store a table with available sql servers on the network
     Public DB_Servers_List As New DataSet 'a variable dataset to store the sql servers list from the network
+    Public MT_IP As String 'the IP address of the mikrotik, this is used to get accounting data
     Public setupStatus As Boolean 'variable to store the status of setup screen
     '
     'configuration file contents
@@ -20,6 +21,7 @@ Module Globals
     Public Config_DB_Instance As String 'the database server instance name as in the configuration file
     Public Config_DB_User_Name As String 'the database server user name as in the configuration file
     Public Config_DB_Password As String 'the database user password as in the configuration file
+    Public Config_MT_IP As String 'the IP address of the mikrotik, this is used to get accounting data
     '
     'errors and messages constants
     Public ERR00_NOSETUP() As String = {"Could not find configuratio file", "We did not find the configuration file file, do you want to create one now?", "ERR00_NOSETUP"}

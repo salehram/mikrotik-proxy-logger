@@ -32,6 +32,7 @@ Public Class frmDBConnect
                     If Config_DB_Name IsNot Nothing Then txtDBName.Text = Config_DB_Name
                     If Config_DB_User_Name IsNot Nothing Then txtDBUserName.Text = Config_DB_User_Name
                     If Config_DB_Password IsNot Nothing Then txtDBPassword.Text = Config_DB_Password
+                    If Config_MT_IP IsNot Nothing Then txtMTIP.Text = Config_MT_IP
                 End If
             Case 0 'open from first run setup
 
@@ -55,7 +56,7 @@ Public Class frmDBConnect
         Select Case windowMode
             Case 1 'normal open
                 If validateFields() = 0 Then
-                    config_text = lbServerList.SelectedItem.ToString & vbCrLf & txtInstanceName.Text & vbCrLf & txtDBName.Text & vbCrLf & txtDBUserName.Text & vbCrLf & txtDBPassword.Text
+                    config_text = lbServerList.SelectedItem.ToString & vbCrLf & txtInstanceName.Text & vbCrLf & txtDBName.Text & vbCrLf & txtDBUserName.Text & vbCrLf & txtDBPassword.Text & vbCrLf & txtMTIP.Text
                     global_functions.WriteFile(Config_File, config_text)
                     setupStatus = True
                     checkPrereqs.ReadConfig()
@@ -66,7 +67,7 @@ Public Class frmDBConnect
             Case 0 'open from first run setup
                 setupStatus = True
                 If validateFields() = 0 Then
-                    config_text = lbServerList.SelectedItem.ToString & vbCrLf & txtInstanceName.Text & vbCrLf & txtDBName.Text & vbCrLf & txtDBUserName.Text & vbCrLf & txtDBPassword.Text
+                    config_text = lbServerList.SelectedItem.ToString & vbCrLf & txtInstanceName.Text & vbCrLf & txtDBName.Text & vbCrLf & txtDBUserName.Text & vbCrLf & txtDBPassword.Text & vbCrLf & txtMTIP.Text
                     global_functions.WriteFile(Config_File, config_text)
                     setupStatus = True
                     checkPrereqs.ReadConfig()

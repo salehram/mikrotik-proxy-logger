@@ -46,6 +46,7 @@ Public Class CheckPrereqs
                 Config_DB_Name = sr.ReadLine
                 Config_DB_User_Name = sr.ReadLine
                 Config_DB_Password = sr.ReadLine
+                Config_MT_IP = sr.ReadLine
             End Using
         Catch e As Exception
             GF.ShowMsg(2, ERR04_ReadConfig(0), ERR04_ReadConfig(1) & e.Message, ERR04_ReadConfig(2), 1)

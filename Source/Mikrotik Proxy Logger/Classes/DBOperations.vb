@@ -20,10 +20,19 @@ Public Class DBOperations
         Try
             sqlConnection.Open()
             sqlCmd = sqlConnection.CreateCommand
-            sqlStr = "CREATE TABLE mtpl_table1 (Id int IDENTITY(1,1) NOT NULL PRIMARY KEY, logdatetime datetime, logheader VARCHAR(17), logsource  varchar(15), logmethod varchar(50), logportno int, logurl text, logaction varchar(50), reqcached varchar(50), flag int not null)"
-            sqlCmd.CommandText = sqlStr
-            sqlCmd.ExecuteNonQuery()
-            sqlStr = "create table mtpl_hosts (Id int IDENTITY(1,1) not null primary key, host_ipaddr varchar(15) not null, host_hostname text, flag int not null)"
+            ''
+            ''main table
+            'sqlStr = "CREATE TABLE mtpl_table1 (Id int IDENTITY(1,1) NOT NULL PRIMARY KEY, logdatetime datetime, logheader VARCHAR(17), logsource  varchar(15), logmethod varchar(50), logportno int, logurl text, logaction varchar(50), reqcached varchar(50), flag int not null)"
+            'sqlCmd.CommandText = sqlStr
+            'sqlCmd.ExecuteNonQuery()
+            ''
+            ''hosts table
+            'sqlStr = "create table mtpl_hosts (Id int IDENTITY(1,1) not null primary key, host_ipaddr varchar(15) not null, host_hostname text, flag int not null)"
+            'sqlCmd.CommandText = sqlStr
+            'sqlCmd.ExecuteNonQuery()
+            '
+            'accounting table
+            sqlStr = "create table mtpl_accounting (Id int IDENTITY(1,1) not null primary key, logDate datetime not null, src_addr varchar(15) not null, dst_addr varchar(15) not null, bytes_vol int not null, packets_count int not null, flag int not null)"
             sqlCmd.CommandText = sqlStr
             sqlCmd.ExecuteNonQuery()
         Catch ex As Exception

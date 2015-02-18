@@ -20,6 +20,7 @@ Public Class CheckDB
                 Config_DB_Name = sr.ReadLine
                 Config_DB_User_Name = sr.ReadLine
                 Config_DB_Password = sr.ReadLine
+                Config_MT_IP = sr.ReadLine
             End Using
             Return 0
         Catch e As Exception

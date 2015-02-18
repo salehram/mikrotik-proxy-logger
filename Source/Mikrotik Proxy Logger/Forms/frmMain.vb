@@ -91,13 +91,13 @@ Public Class frmMain
         frmResolveHosts.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         Dim inStream As StreamReader
         Dim webRequest As WebRequest
         Dim webresponse As WebResponse
         webRequest = webRequest.Create("http://192.168.1.1/accounting/ip.cgi")
         webresponse = webRequest.GetResponse()
         inStream = New StreamReader(webresponse.GetResponseStream())
-        MsgBox(inStream.ReadToEnd())
+        MsgBox(inStream.ReadLine())
     End Sub
 End Class

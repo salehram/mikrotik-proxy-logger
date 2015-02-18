@@ -35,6 +35,8 @@ Partial Class frmDBConnect
         Me.btnSaveClose = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnBuildDB = New System.Windows.Forms.Button()
+        Me.txtMTIP = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -62,7 +64,7 @@ Partial Class frmDBConnect
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(184, 45)
+        Me.Label1.Location = New System.Drawing.Point(184, 34)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(104, 13)
         Me.Label1.TabIndex = 1
@@ -71,7 +73,7 @@ Partial Class frmDBConnect
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(201, 71)
+        Me.Label2.Location = New System.Drawing.Point(201, 60)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(87, 13)
         Me.Label2.TabIndex = 2
@@ -80,7 +82,7 @@ Partial Class frmDBConnect
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(226, 97)
+        Me.Label3.Location = New System.Drawing.Point(226, 86)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(62, 13)
         Me.Label3.TabIndex = 3
@@ -89,7 +91,7 @@ Partial Class frmDBConnect
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(231, 123)
+        Me.Label4.Location = New System.Drawing.Point(231, 112)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(57, 13)
         Me.Label4.TabIndex = 4
@@ -97,28 +99,28 @@ Partial Class frmDBConnect
         '
         'txtInstanceName
         '
-        Me.txtInstanceName.Location = New System.Drawing.Point(294, 42)
+        Me.txtInstanceName.Location = New System.Drawing.Point(294, 31)
         Me.txtInstanceName.Name = "txtInstanceName"
         Me.txtInstanceName.Size = New System.Drawing.Size(155, 20)
         Me.txtInstanceName.TabIndex = 5
         '
         'txtDBName
         '
-        Me.txtDBName.Location = New System.Drawing.Point(294, 68)
+        Me.txtDBName.Location = New System.Drawing.Point(294, 57)
         Me.txtDBName.Name = "txtDBName"
         Me.txtDBName.Size = New System.Drawing.Size(155, 20)
         Me.txtDBName.TabIndex = 6
         '
         'txtDBUserName
         '
-        Me.txtDBUserName.Location = New System.Drawing.Point(294, 94)
+        Me.txtDBUserName.Location = New System.Drawing.Point(294, 83)
         Me.txtDBUserName.Name = "txtDBUserName"
         Me.txtDBUserName.Size = New System.Drawing.Size(155, 20)
         Me.txtDBUserName.TabIndex = 7
         '
         'txtDBPassword
         '
-        Me.txtDBPassword.Location = New System.Drawing.Point(294, 120)
+        Me.txtDBPassword.Location = New System.Drawing.Point(294, 109)
         Me.txtDBPassword.Name = "txtDBPassword"
         Me.txtDBPassword.Size = New System.Drawing.Size(155, 20)
         Me.txtDBPassword.TabIndex = 8
@@ -150,12 +152,30 @@ Partial Class frmDBConnect
         Me.btnBuildDB.Text = "Build Tables"
         Me.btnBuildDB.UseVisualStyleBackColor = True
         '
+        'txtMTIP
+        '
+        Me.txtMTIP.Location = New System.Drawing.Point(294, 135)
+        Me.txtMTIP.Name = "txtMTIP"
+        Me.txtMTIP.Size = New System.Drawing.Size(155, 20)
+        Me.txtMTIP.TabIndex = 13
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(191, 138)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(97, 13)
+        Me.Label5.TabIndex = 12
+        Me.Label5.Text = "Mikrotik IP address"
+        '
         'frmDBConnect
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(462, 199)
         Me.ControlBox = False
+        Me.Controls.Add(Me.txtMTIP)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnBuildDB)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnSaveClose)
@@ -190,4 +210,6 @@ Partial Class frmDBConnect
     Friend WithEvents btnSaveClose As System.Windows.Forms.Button
     Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents btnBuildDB As System.Windows.Forms.Button
+    Friend WithEvents txtMTIP As System.Windows.Forms.TextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

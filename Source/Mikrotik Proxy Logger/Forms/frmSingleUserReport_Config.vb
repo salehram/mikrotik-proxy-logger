@@ -9,6 +9,7 @@ Public Class frmSingleUserReport_Config
     Private Sub frmSingleUserReport_Config_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'filling the 2 lists with ip address and host name if available
         fillHostIP_Lists()
+        cbSrcIPList.SelectedIndex = 0
     End Sub
 
     Private Sub fillHostIP_Lists()
@@ -39,5 +40,49 @@ Public Class frmSingleUserReport_Config
             sqlConnection.Close()
             sqlConnection = Nothing
         End Try
+    End Sub
+
+    Private Sub cbSrcIPList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbSrcIPList.SelectedIndexChanged
+        cbHostNameList.SelectedIndex = cbSrcIPList.SelectedIndex
+    End Sub
+
+    Private Sub cbHostNameList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbHostNameList.SelectedIndexChanged
+        cbSrcIPList.SelectedIndex = cbHostNameList.SelectedIndex
+    End Sub
+
+    Private Sub btnGenerateReport_Click(sender As Object, e As EventArgs) Handles btnGenerateReport.Click
+        Dim fromDate As DateTime
+        Dim toDate As DateTime
+        Dim dateDifference As Integer
+        '
+        'getting the from date variable
+        If dtFromDate.Value = Nothing Then
+            dtFromDate.Value = DateTime.Now
+            fromDate = dtFromDate.Value
+        Else
+            fromDate = dtFromDate.Value
+        End If
+        '
+        'getting the to date vriable
+        If DtTillDate.Value = Nothing Then
+            DtTillDate.Value = DateTime.Now
+            toDate = DtTillDate.Value
+        Else
+            toDate = DtTillDate.Value
+        End If
+        '
+        'comaring the 2 dates to make sure no errors occur
+        dateDifference = DateTime.Compare(fromDate, toDate)
+        '
+        'comparing the 2 dates and take action based on the result:
+        Select Case dateDifference
+            Case Is < 0
+                'from date is earlier than to date, which is the correct case we want
+                MsgBox("success")
+            Case Else
+                'from date is equal or later than to date, which is the wrong case,
+                'we will display error message and abort report generation
+                MsgBox("Fail")
+        End Select
     End Sub
 End Class

@@ -7,9 +7,9 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Mikrotik Proxy Logger", "Mi
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MTPL-Listener Service", "MTPL-Listener Service\MTPL-Listener Service.vbproj", "{836C29C9-CC67-4272-818F-5634898E3486}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Service Install", "Service Install\Service Install.vdproj", "{8170E37A-B451-4F2C-AFEB-D027FFAB6FD0}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Full package install", "Full package install\Full package install.vdproj", "{BCD33320-169F-4FC8-96F9-3E2CA5A7B180}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Full package install", "Full package install\Full package install.vdproj", "{48A43692-76EB-41DA-882E-C3D233589B0D}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Service Install", "Service Install\Service Install.vdproj", "{87F80F92-A9AB-4C97-89A4-49BDB63803B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,16 +40,26 @@ Global
 		{836C29C9-CC67-4272-818F-5634898E3486}.Release|Any CPU.Build.0 = Release|Any CPU
 		{836C29C9-CC67-4272-818F-5634898E3486}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{836C29C9-CC67-4272-818F-5634898E3486}.SingleImage|Any CPU.Build.0 = Release|Any CPU
-		{8170E37A-B451-4F2C-AFEB-D027FFAB6FD0}.CD_ROM|Any CPU.ActiveCfg = Release
-		{8170E37A-B451-4F2C-AFEB-D027FFAB6FD0}.Debug|Any CPU.ActiveCfg = Debug
-		{8170E37A-B451-4F2C-AFEB-D027FFAB6FD0}.DVD-5|Any CPU.ActiveCfg = Debug
-		{8170E37A-B451-4F2C-AFEB-D027FFAB6FD0}.Release|Any CPU.ActiveCfg = Release
-		{8170E37A-B451-4F2C-AFEB-D027FFAB6FD0}.SingleImage|Any CPU.ActiveCfg = Release
-		{48A43692-76EB-41DA-882E-C3D233589B0D}.CD_ROM|Any CPU.ActiveCfg = Release
-		{48A43692-76EB-41DA-882E-C3D233589B0D}.Debug|Any CPU.ActiveCfg = Debug
-		{48A43692-76EB-41DA-882E-C3D233589B0D}.DVD-5|Any CPU.ActiveCfg = Debug
-		{48A43692-76EB-41DA-882E-C3D233589B0D}.Release|Any CPU.ActiveCfg = Release
-		{48A43692-76EB-41DA-882E-C3D233589B0D}.SingleImage|Any CPU.ActiveCfg = Release
+		{BCD33320-169F-4FC8-96F9-3E2CA5A7B180}.CD_ROM|Any CPU.ActiveCfg = Release
+		{BCD33320-169F-4FC8-96F9-3E2CA5A7B180}.CD_ROM|Any CPU.Build.0 = Release
+		{BCD33320-169F-4FC8-96F9-3E2CA5A7B180}.Debug|Any CPU.ActiveCfg = Debug
+		{BCD33320-169F-4FC8-96F9-3E2CA5A7B180}.Debug|Any CPU.Build.0 = Debug
+		{BCD33320-169F-4FC8-96F9-3E2CA5A7B180}.DVD-5|Any CPU.ActiveCfg = Debug
+		{BCD33320-169F-4FC8-96F9-3E2CA5A7B180}.DVD-5|Any CPU.Build.0 = Debug
+		{BCD33320-169F-4FC8-96F9-3E2CA5A7B180}.Release|Any CPU.ActiveCfg = Release
+		{BCD33320-169F-4FC8-96F9-3E2CA5A7B180}.Release|Any CPU.Build.0 = Release
+		{BCD33320-169F-4FC8-96F9-3E2CA5A7B180}.SingleImage|Any CPU.ActiveCfg = Release
+		{BCD33320-169F-4FC8-96F9-3E2CA5A7B180}.SingleImage|Any CPU.Build.0 = Release
+		{87F80F92-A9AB-4C97-89A4-49BDB63803B4}.CD_ROM|Any CPU.ActiveCfg = Release
+		{87F80F92-A9AB-4C97-89A4-49BDB63803B4}.CD_ROM|Any CPU.Build.0 = Release
+		{87F80F92-A9AB-4C97-89A4-49BDB63803B4}.Debug|Any CPU.ActiveCfg = Debug
+		{87F80F92-A9AB-4C97-89A4-49BDB63803B4}.Debug|Any CPU.Build.0 = Debug
+		{87F80F92-A9AB-4C97-89A4-49BDB63803B4}.DVD-5|Any CPU.ActiveCfg = Debug
+		{87F80F92-A9AB-4C97-89A4-49BDB63803B4}.DVD-5|Any CPU.Build.0 = Debug
+		{87F80F92-A9AB-4C97-89A4-49BDB63803B4}.Release|Any CPU.ActiveCfg = Release
+		{87F80F92-A9AB-4C97-89A4-49BDB63803B4}.Release|Any CPU.Build.0 = Release
+		{87F80F92-A9AB-4C97-89A4-49BDB63803B4}.SingleImage|Any CPU.ActiveCfg = Release
+		{87F80F92-A9AB-4C97-89A4-49BDB63803B4}.SingleImage|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

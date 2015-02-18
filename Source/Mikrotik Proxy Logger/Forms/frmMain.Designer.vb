@@ -60,7 +60,6 @@ Partial Class frmMain
         Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ServiceController1 = New System.ServiceProcess.ServiceController()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -297,21 +296,11 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(301, 213)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(861, 540)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
@@ -365,6 +354,5 @@ Partial Class frmMain
     Friend WithEvents SingleUserReportsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents smSingleUserReport As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GenerateSingleUserReportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class

@@ -1,0 +1,60 @@
+﻿               '
+                'Global_functions.WriteLog(Encoding.ASCII.GetString(bytes, 0, bytes.Length), 3)
+                logMSG(0) = rawlogMSG(0) 'log header
+                logMSG(1) = rawlogMSG(1) 'log source
+                logMSG(2) = rawlogMSG(2) 'method
+                progress = 3
+                '
+                'Global_functions.WriteLog(logMSG(0) & " -- " & logMSG(1) & " -- " & logMSG(2), 3)
+                'now checking if the next value is the URL or the length...
+                If Integer.TryParse(rawlogMSG(3), intValidate) Then
+                    ' we have an integer value here which is the length value
+                    logMSG(3) = rawlogMSG(3) 'length
+                    logMSG(4) = rawlogMSG(4) 'url
+                    progress = 40
+                    '
+                    'Global_functions.WriteLog(logMSG(3) & " -- " & logMSG(4), 3)
+                    If msgLength > 5 Then
+                        logMSG(5) = rawlogMSG(5)
+                        actionMsg = logMSG(5).Split("=")
+                        progress = 50
+                        logMSG(6) = rawlogMSG(6) 'is cached?
+                        cacheMsg = logMSG(6).Split("=")
+                        progress = 60
+                    Else
+                        logMSG(5) = " = " 'action
+                        logMSG(6) = " = "
+                        actionMsg = logMSG(5).Split("=")
+                        progress = 501
+                        cacheMsg = logMSG(6).Split("=")
+                        progress = 601
+                    End If
+                    '
+                    'Global_functions.WriteLog(logMSG(5) & " -- " & actionMsg(0) & " -- " & actionMsg(1) & " -- " & actionMsg(0), 3)
+                    'Global_functions.WriteLog(logMSG(6) & " -- " & cacheMsg(0) & " -- " & cacheMsg(1) & " -- " & cacheMsg(0), 3)
+                Else
+                    'logMSG(3) = rawlogMSG(4) 'length
+                    logMSG(4) = rawlogMSG(3) 'url
+                    progress = 41
+                    '
+                    'Global_functions.WriteLog(logMSG(3) & " -- " & logMSG(4), 3)
+                    If msgLength > 5 Then
+                        logMSG(5) = rawlogMSG(5) 'action
+                        actionMsg = logMSG(5).Split("=")
+                        progress = 51
+                        logMSG(6) = rawlogMSG(6) 'is cached?
+                        cacheMsg = logMSG(6).Split("=")
+                        progress = 61
+                    Else
+                        logMSG(5) = " = " 'action
+                        logMSG(6) = " = "
+                        actionMsg = logMSG(5).Split("=")
+                        progress = 511
+                        cacheMsg = logMSG(6).Split("=")
+                        progress = 611
+                    End If
+                    '
+                    'Global_functions.WriteLog(logMSG(5) & " -- " & actionMsg(0) & " -- " & actionMsg(1) & " -- " & actionMsg(0), 3)
+                    'Global_functions.WriteLog(logMSG(6) & " -- " & cacheMsg(0) & " -- " & cacheMsg(1) & " -- " & cacheMsg(0), 3)
+                    logMSG(3) = 0 'length
+                End If

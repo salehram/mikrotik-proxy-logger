@@ -26,7 +26,7 @@ Partial Class frmSingleUserReport_Config
         Me.Label2 = New System.Windows.Forms.Label()
         Me.cbSrcIPList = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.dtToDate = New System.Windows.Forms.DateTimePicker()
+        Me.DtTillDate = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.dtFromDate = New System.Windows.Forms.DateTimePicker()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -62,6 +62,7 @@ Partial Class frmSingleUserReport_Config
         Me.cbSrcIPList.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbSrcIPList.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cbSrcIPList.FormattingEnabled = True
+        Me.cbSrcIPList.Items.AddRange(New Object() {"All", "----"})
         Me.cbSrcIPList.Location = New System.Drawing.Point(189, 30)
         Me.cbSrcIPList.Name = "cbSrcIPList"
         Me.cbSrcIPList.Size = New System.Drawing.Size(121, 21)
@@ -70,7 +71,7 @@ Partial Class frmSingleUserReport_Config
         'GroupBox1
         '
         Me.GroupBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.GroupBox1.Controls.Add(Me.dtToDate)
+        Me.GroupBox1.Controls.Add(Me.DtTillDate)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.dtFromDate)
         Me.GroupBox1.Controls.Add(Me.Label4)
@@ -81,14 +82,13 @@ Partial Class frmSingleUserReport_Config
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Date/Time range"
         '
-        'dtToDate
+        'DtTillDate
         '
-        Me.dtToDate.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.dtToDate.Location = New System.Drawing.Point(43, 45)
-        Me.dtToDate.Name = "dtToDate"
-        Me.dtToDate.Size = New System.Drawing.Size(200, 20)
-        Me.dtToDate.TabIndex = 3
-        Me.dtToDate.Value = New Date(2015, 1, 19, 0, 0, 0, 0)
+        Me.DtTillDate.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DtTillDate.Location = New System.Drawing.Point(43, 44)
+        Me.DtTillDate.Name = "DtTillDate"
+        Me.DtTillDate.Size = New System.Drawing.Size(200, 20)
+        Me.DtTillDate.TabIndex = 3
         '
         'Label5
         '
@@ -123,6 +123,7 @@ Partial Class frmSingleUserReport_Config
         Me.cbHostNameList.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbHostNameList.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cbHostNameList.FormattingEnabled = True
+        Me.cbHostNameList.Items.AddRange(New Object() {"All", "----"})
         Me.cbHostNameList.Location = New System.Drawing.Point(316, 30)
         Me.cbHostNameList.Name = "cbHostNameList"
         Me.cbHostNameList.Size = New System.Drawing.Size(121, 21)
@@ -187,10 +188,10 @@ Partial Class frmSingleUserReport_Config
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents cbHostNameList As System.Windows.Forms.ComboBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents dtToDate As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents dtFromDate As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents btnGenerateReport As System.Windows.Forms.Button
+    Friend WithEvents DtTillDate As System.Windows.Forms.DateTimePicker
 End Class
