@@ -94,19 +94,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_2AD4CA762BB241E7AAE463E53A7823B2"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8945C63BE3124B328C7BF6971ED724B4"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BA3ECBE6739753038EBE68E13D742CA9"
+        "OwnerKey" = "8:_FA8AF1297D8BFA45784D0B2987EDE9A2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -118,13 +106,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FA8AF1297D8BFA45784D0B2987EDE9A2"
+        "OwnerKey" = "8:_BA3ECBE6739753038EBE68E13D742CA9"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_9B09DA77AC06C02F1FA99FBEB30F9109"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8945C63BE3124B328C7BF6971ED724B4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2AD4CA762BB241E7AAE463E53A7823B2"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -145,6 +145,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -161,6 +169,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -524,15 +540,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Mikrotik Proxy Logger"
-        "ProductCode" = "8:{A319019A-439A-4EE0-9399-7AB076BA746A}"
-        "PackageCode" = "8:{A693C7C6-EE04-4D77-8956-33BCE1F1A4A6}"
+        "ProductCode" = "8:{329A5FBC-C730-4AF9-9C10-726E2568202F}"
+        "PackageCode" = "8:{0A548F32-24E6-4694-9956-BCE3B5C16287}"
         "UpgradeCode" = "8:{5F52F130-CA96-41C1-AC37-BF9252F3E4C5}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:0.0.1"
+        "ProductVersion" = "8:0.0.2"
         "Manufacturer" = "8:is-linux"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

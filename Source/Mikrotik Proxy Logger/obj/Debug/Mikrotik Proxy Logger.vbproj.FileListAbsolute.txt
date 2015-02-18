@@ -23,4 +23,3 @@ C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Prox
 C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\obj\Debug\Mikrotik Proxy Logger.exe
 C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\obj\Debug\Mikrotik Proxy Logger.xml
 C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\obj\Debug\Mikrotik Proxy Logger.pdb
-C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\obj\Debug\Mikrotik Proxy Logger.vbprojResolveAssemblyReference.cache
