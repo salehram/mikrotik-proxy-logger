@@ -64,8 +64,6 @@ Public Class MTPL_Listener
         Dim msgLength As Integer
         Dim intValidate As Integer
         '
-        Dim counter As Integer
-        Dim msgBreak As String
         Dim progress As Integer
         Global_functions.WriteLog("Listening for connections", 1)
         Try
@@ -84,7 +82,7 @@ Public Class MTPL_Listener
                 '
                 '''''''''' ENABLE FOR DEBUG ''''''''''
                 'Global_functions.WriteLog(incomingMSG, 3)
-                '''''''''' ENABLE FOR DEBUG ''''''''''
+                '''''''''' END ENABLE FOR DEBUG ''''''''''
                 '
                 '
                 rawlogMSG = incomingMSG.Split(" ")
@@ -101,7 +99,7 @@ Public Class MTPL_Listener
                 'Loop Until counter >= msgLength
                 'msgBreak = msgBreak & vbCrLf & vbCrLf & "------- Length: " & msgLength
                 'Global_functions.WriteLog(msgBreak, 3)
-                '''''''''' ENABLE FOR DEBUG ''''''''''
+                '''''''''' END ENABLE FOR DEBUG ''''''''''
                 '
                 '
                 'receiving the message on 2 formats:
@@ -179,10 +177,12 @@ Public Class MTPL_Listener
     End Sub
 
     Private Sub getAccountingData()
+        On Error Resume Next
         Dim inStream As StreamReader
         Dim webRequest As WebRequest
         Dim webresponse As WebResponse
         Dim msgData(5) As String
+        webRequest.Timeout = 30000
         Do
             webRequest = webRequest.Create("http://" & Config_MT_IP & "/accounting/ip.cgi")
             webresponse = webRequest.GetResponse()

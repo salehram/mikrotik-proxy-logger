@@ -20,21 +20,21 @@ Public Class frmMain
             CheckPrereqs.CheckDB() 'checking databse server
             If DB_Server = True Then 'we have a sql server in the network
                 'showing a message asking if the user want to show the setup screen
-                If Global_Functions.ShowMsg(3, ERR00_NOSETUP(0), ERR00_NOSETUP(1), ERR00_NOSETUP(2), 2) = 1 Then
+                If Global_Functions.ShowMsg(3, ERR000_NOSETUP(0), ERR000_NOSETUP(1), ERR000_NOSETUP(2), 2) = 1 Then
                     'show the setup window
                     '1- disabling all menus until we finish from setup
                     Global_Functions.DisableApplicationMenus(0)
                     '2- show setup window:
                     LoadConfigWindow()
                 Else 'the user did not want to show the setup window, we will stop loading until setup is done
-                    Global_Functions.ShowMsg(2, ERR02_frmMainLOAD_NOSETUP(0), ERR02_frmMainLOAD_NOSETUP(1), ERR02_frmMainLOAD_NOSETUP(2), 1)
+                    Global_Functions.ShowMsg(2, ERR002_frmMainLOAD_NOSETUP(0), ERR002_frmMainLOAD_NOSETUP(1), ERR002_frmMainLOAD_NOSETUP(2), 1)
                     'disable all menus
                     Global_Functions.DisableApplicationMenus(0)
                     'stop loding the rest of the application
                     Exit Sub
                 End If
             Else 'there is no database server on the network, we cannot run the program
-                Global_Functions.ShowMsg(2, ERR01_frmMainLOAD_NODBSVR(0), ERR01_frmMainLOAD_NODBSVR(1), ERR01_frmMainLOAD_NODBSVR(2), 1)
+                Global_Functions.ShowMsg(2, ERR001_frmMainLOAD_NODBSVR(0), ERR001_frmMainLOAD_NODBSVR(1), ERR001_frmMainLOAD_NODBSVR(2), 1)
                 'disable all menus
                 Global_Functions.DisableApplicationMenus(0)
                 'stop loding the rest of the application
@@ -91,13 +91,7 @@ Public Class frmMain
         frmResolveHosts.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        Dim inStream As StreamReader
-        Dim webRequest As WebRequest
-        Dim webresponse As WebResponse
-        webRequest = webRequest.Create("http://192.168.1.1/accounting/ip.cgi")
-        webresponse = webRequest.GetResponse()
-        inStream = New StreamReader(webresponse.GetResponseStream())
-        MsgBox(inStream.ReadLine())
+    Private Sub ExitToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem1.Click
+        End
     End Sub
 End Class

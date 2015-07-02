@@ -86,7 +86,7 @@ Public Class frmDBConnect
         If txtDBUserName.Text = Nothing Then ErrorText = ErrorText & "User name" & vbCrLf
         If txtDBPassword.Text = Nothing Then ErrorText = ErrorText & "Password" & vbCrLf
         If ErrorText <> Nothing Then
-            global_functions.ShowMsg(2, ERR03_validateFields(0), ERR03_validateFields(1) & vbCrLf & vbCrLf & ErrorText, ERR03_validateFields(2), 1)
+            global_functions.ShowMsg(2, ERR003_validateFields(0), ERR003_validateFields(1) & vbCrLf & vbCrLf & ErrorText, ERR003_validateFields(2), 1)
             Return -1
         Else
             Return 0

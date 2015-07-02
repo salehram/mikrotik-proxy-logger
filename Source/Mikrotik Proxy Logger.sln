@@ -11,6 +11,8 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Full package install", "Ful
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Service Install", "Service Install\Service Install.vdproj", "{87F80F92-A9AB-4C97-89A4-49BDB63803B4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9192F229-8430-4630-9B83-709CF168B1B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU

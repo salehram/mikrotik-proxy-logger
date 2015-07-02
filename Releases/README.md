@@ -6,9 +6,10 @@ EXPECT BUGS, UNUSUAL BEHAVIOR, AND MAYBE ERRORS DURING INSTALL AND OPERATION
 
 # *** ALPHA RELEASE WARNING ***
 
-Current version: 0.0.2a - Download from "release" on top of the page
+Current version: 0.0.3a - Download from "release" on top of the page
 
-# Version 0.0.2a:
-* SERVICE: Service can now grab "Accounting" data to generate reports for bandwidth usage.
-* SERVICE: Re-written the service code to be more error free as there was some major bug in the previous code.
-* GUI: Repositioned some menu items to be more logical
+# Version 0.0.3a:
+* SERVICE: Fixed the code which the service use to grab the accounting data in order to display the correct numbers.
+* SERVICE: There is a bug where the service will crash if the computer goes into sleep mode then resume after.
+* GUI: We can now have a full user report viewed from the menu: Reports -> Single user reports -> View single user report.
+* GUI: Added chart controls to make reports more convenient, but will need more testing and work on it.

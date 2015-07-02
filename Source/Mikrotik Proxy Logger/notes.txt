@@ -1,0 +1,14 @@
+for accounting data:
+- we will calculate the user usage over the period we select
+- we will calculate the over all usage for all usres in the period we select then we will calculate the selected user percentage
+
+
+
+
+
+
+- NOTE: requests going to the accounting URL will not be logged in the database.
+-----------
+features to be added:
+- most used protocols (http, ftp...)
+- most used content type (jpeg, exe, zip...)

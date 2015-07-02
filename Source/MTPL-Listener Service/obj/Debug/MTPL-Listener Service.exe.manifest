@@ -3,7 +3,7 @@
   <asmv1:assemblyIdentity name="MTPL-Listener Service.exe" version="0.0.1.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="MTPL-Listener Service" version="0.0.2.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="MTPL-Listener Service" version="0.0.3.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="MTPL-Listener Service.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -58,7 +58,7 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MTPL-Listener Service.exe" size="39936">
-      <assemblyIdentity name="MTPL-Listener Service" version="0.0.2.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="MTPL-Listener Service" version="0.0.3.0" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>
   <file name="old_code.txt" size="3196">

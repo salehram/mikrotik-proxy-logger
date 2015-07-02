@@ -7,6 +7,12 @@ Imports System.ServiceProcess
 Imports Microsoft.VisualBasic
 Imports System.Windows.Forms
 
+'functions/sub list:
+'F serviceControl
+'F ShowMsg
+'S DisableApplicationMenus
+'F WriteFile
+
 Public Class Global_Functions
 
     ''' <summary>

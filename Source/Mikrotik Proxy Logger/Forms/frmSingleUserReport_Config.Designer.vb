@@ -62,7 +62,6 @@ Partial Class frmSingleUserReport_Config
         Me.cbSrcIPList.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbSrcIPList.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cbSrcIPList.FormattingEnabled = True
-        Me.cbSrcIPList.Items.AddRange(New Object() {"All", "----"})
         Me.cbSrcIPList.Location = New System.Drawing.Point(189, 30)
         Me.cbSrcIPList.Name = "cbSrcIPList"
         Me.cbSrcIPList.Size = New System.Drawing.Size(121, 21)
@@ -123,7 +122,6 @@ Partial Class frmSingleUserReport_Config
         Me.cbHostNameList.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.cbHostNameList.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cbHostNameList.FormattingEnabled = True
-        Me.cbHostNameList.Items.AddRange(New Object() {"All", "----"})
         Me.cbHostNameList.Location = New System.Drawing.Point(316, 30)
         Me.cbHostNameList.Name = "cbHostNameList"
         Me.cbHostNameList.Size = New System.Drawing.Size(121, 21)
