@@ -1,4 +1,5 @@
-﻿Imports System
+﻿'' this class is to control the listener service and check its status
+Imports System
 Imports System.Management
 Imports System.Diagnostics
 Imports System.ServiceProcess

@@ -49,8 +49,8 @@ Partial Class frmMain
         Me.SingleUserReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.smSingleUserReport = New System.Windows.Forms.ToolStripMenuItem()
         Me.GenerateSingleUserReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ViewGroupReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ViewAllUsersReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.smOverallReport = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ViewRawDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripSeparator()
@@ -60,8 +60,9 @@ Partial Class frmMain
         Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ServiceController1 = New System.ServiceProcess.ServiceController()
-        Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripSeparator()
-        Me.smOverallReport = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.OpenSavedReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GenerateCustomReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -216,7 +217,7 @@ Partial Class frmMain
         '
         'mm_Reports
         '
-        Me.mm_Reports.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SingleUserReportsToolStripMenuItem, Me.ViewGroupReportToolStripMenuItem, Me.ViewAllUsersReportToolStripMenuItem, Me.ToolStripMenuItem4, Me.ViewRawDataToolStripMenuItem, Me.ToolStripMenuItem3, Me.GenerateOneTimeReportToolStripMenuItem})
+        Me.mm_Reports.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SingleUserReportsToolStripMenuItem, Me.ToolStripMenuItem4, Me.ViewRawDataToolStripMenuItem, Me.ToolStripMenuItem3, Me.GenerateOneTimeReportToolStripMenuItem, Me.GenerateCustomReportToolStripMenuItem, Me.ToolStripMenuItem7, Me.OpenSavedReportToolStripMenuItem})
         Me.mm_Reports.Name = "mm_Reports"
         Me.mm_Reports.Size = New System.Drawing.Size(59, 20)
         Me.mm_Reports.Text = "Reports"
@@ -240,17 +241,16 @@ Partial Class frmMain
         Me.GenerateSingleUserReportToolStripMenuItem.Size = New System.Drawing.Size(215, 22)
         Me.GenerateSingleUserReportToolStripMenuItem.Text = "Generate single user report"
         '
-        'ViewGroupReportToolStripMenuItem
+        'ToolStripMenuItem6
         '
-        Me.ViewGroupReportToolStripMenuItem.Name = "ViewGroupReportToolStripMenuItem"
-        Me.ViewGroupReportToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
-        Me.ViewGroupReportToolStripMenuItem.Text = "View group report"
+        Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
+        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(212, 6)
         '
-        'ViewAllUsersReportToolStripMenuItem
+        'smOverallReport
         '
-        Me.ViewAllUsersReportToolStripMenuItem.Name = "ViewAllUsersReportToolStripMenuItem"
-        Me.ViewAllUsersReportToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
-        Me.ViewAllUsersReportToolStripMenuItem.Text = "View all users report"
+        Me.smOverallReport.Name = "smOverallReport"
+        Me.smOverallReport.Size = New System.Drawing.Size(215, 22)
+        Me.smOverallReport.Text = "Overall usage report"
         '
         'ToolStripMenuItem4
         '
@@ -271,8 +271,8 @@ Partial Class frmMain
         'GenerateOneTimeReportToolStripMenuItem
         '
         Me.GenerateOneTimeReportToolStripMenuItem.Name = "GenerateOneTimeReportToolStripMenuItem"
-        Me.GenerateOneTimeReportToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
-        Me.GenerateOneTimeReportToolStripMenuItem.Text = "Generate one time report"
+        Me.GenerateOneTimeReportToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
+        Me.GenerateOneTimeReportToolStripMenuItem.Text = "Generate/view one time report"
         '
         'mm_Help
         '
@@ -298,16 +298,22 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
-        'ToolStripMenuItem6
+        'ToolStripMenuItem7
         '
-        Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(212, 6)
+        Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
+        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(232, 6)
         '
-        'smOverallReport
+        'OpenSavedReportToolStripMenuItem
         '
-        Me.smOverallReport.Name = "smOverallReport"
-        Me.smOverallReport.Size = New System.Drawing.Size(215, 22)
-        Me.smOverallReport.Text = "Overall usage report"
+        Me.OpenSavedReportToolStripMenuItem.Name = "OpenSavedReportToolStripMenuItem"
+        Me.OpenSavedReportToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
+        Me.OpenSavedReportToolStripMenuItem.Text = "Open saved report"
+        '
+        'GenerateCustomReportToolStripMenuItem
+        '
+        Me.GenerateCustomReportToolStripMenuItem.Name = "GenerateCustomReportToolStripMenuItem"
+        Me.GenerateCustomReportToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
+        Me.GenerateCustomReportToolStripMenuItem.Text = "Generate/view custom report"
         '
         'frmMain
         '
@@ -349,8 +355,6 @@ Partial Class frmMain
     Friend WithEvents mm_Data As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents smResolveHostIPstoNames As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mm_Reports As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ViewGroupReportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ViewAllUsersReportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ViewRawDataToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mm_Help As System.Windows.Forms.ToolStripMenuItem
@@ -369,5 +373,8 @@ Partial Class frmMain
     Friend WithEvents GenerateSingleUserReportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem6 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents smOverallReport As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents GenerateCustomReportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem7 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents OpenSavedReportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

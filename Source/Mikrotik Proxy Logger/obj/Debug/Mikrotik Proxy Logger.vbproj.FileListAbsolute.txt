@@ -27,3 +27,5 @@ C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Prox
 C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\obj\Debug\Mikrotik_Proxy_Logger.frmViewReport.resources
 C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\bin\Debug\System.Windows.Forms.DataVisualization.Design.dll
 C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\bin\Debug\System.Windows.Forms.DataVisualization.dll
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\obj\Debug\Mikrotik_Proxy_Logger.frmOverAllReport.resources
+C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\Mikrotik Proxy Logger\obj\Debug\Mikrotik_Proxy_Logger.frmReportResults.resources

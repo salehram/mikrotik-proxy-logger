@@ -102,6 +102,7 @@
     <Compile Include="Classes\CheckPrereqs.vb" />
     <Compile Include="Classes\CheckService.vb" />
     <Compile Include="Classes\DBOperations.vb" />
+    <Compile Include="Classes\FullReportGridBuilder.vb" />
     <Compile Include="Classes\Globals.vb" />
     <Compile Include="Classes\Global_Functions.vb" />
     <Compile Include="Forms\frmDBConnect.Designer.vb">
@@ -115,6 +116,18 @@
     </Compile>
     <Compile Include="Forms\frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOverAllReport.Designer.vb">
+      <DependentUpon>frmOverAllReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmOverAllReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReportResults.Designer.vb">
+      <DependentUpon>frmReportResults.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReportResults.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmResolveHosts.Designer.vb">
@@ -157,6 +170,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOverAllReport.resx">
+      <DependentUpon>frmOverAllReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReportResults.resx">
+      <DependentUpon>frmReportResults.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmResolveHosts.resx">
       <DependentUpon>frmResolveHosts.vb</DependentUpon>

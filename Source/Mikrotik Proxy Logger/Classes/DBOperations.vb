@@ -1,4 +1,5 @@
-﻿Imports System
+﻿'' this class for creating the database tables
+Imports System
 Imports System.IO
 Imports System.Data
 Imports System.Data.Sql

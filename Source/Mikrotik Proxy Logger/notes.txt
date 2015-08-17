@@ -12,3 +12,17 @@ for accounting data:
 features to be added:
 - most used protocols (http, ftp...)
 - most used content type (jpeg, exe, zip...)
+
+
+
+
+
+
+
+----------------------------------
+
+Changelog 0.0.4a:
+- Changed service code so it will not log requests made on the accounting URL
+- User report generating is now fully funcional, what is left is exporting/printing features
+- Report for user can now show correct amount of upload/download data
+- Fixed an issue with the service code when receiving a request from Mikrotik that caused service crash

@@ -94,4 +94,10 @@ Public Class frmMain
     Private Sub ExitToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem1.Click
         End
     End Sub
+
+    Private Sub smOverallReport_Click(sender As Object, e As EventArgs) Handles smOverallReport.Click
+        Dim frmOverAllReport As New frmOverAllReport
+        frmOverAllReport.MdiParent = Me
+        frmOverAllReport.Show()
+    End Sub
 End Class

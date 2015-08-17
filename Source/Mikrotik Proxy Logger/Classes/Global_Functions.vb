@@ -7,7 +7,7 @@ Imports System.ServiceProcess
 Imports Microsoft.VisualBasic
 Imports System.Windows.Forms
 
-'functions/sub list:
+'functions/sub list (F=Function, S=Sub procedure):
 'F serviceControl
 'F ShowMsg
 'S DisableApplicationMenus

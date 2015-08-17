@@ -13,6 +13,9 @@ Module Globals
     Public MT_IP As String 'the IP address of the mikrotik, this is used to get accounting data
     Public setupStatus As Boolean 'variable to store the status of setup screen
     '
+    'global objects
+    Public AllUsersReport_Dataset As New DataSet 'a dataset object to store the data when we create a full users report
+    '
     'configuration file contents
     Public Config_Dir As String = Application.StartupPath & "\config" 'variable to store the location of the configuration directory
     Public Config_File As String = Application.StartupPath & "\config\config.ini" 'variable to store the location of the configuration file
@@ -37,4 +40,5 @@ Module Globals
     Public ERR009_btnGenerateReport_Click_DATEERROR() As String = {"Date selection error!", "You cannot have 'from' later than 'to' in the dates field." & vbCrLf & "Please fix your date selection!", "ERR009_btnGenerateReport_Click_DATEERROR"}
     Public ERR010_btnGenerateReport_Click_BuildDataset() As String = {"Could not get the required report", "We were unable to connect or fill the dataset with the required data.", "ERR010_btnGenerateReport_Click_BuildDataset"}
     Public ERR011_btnGenerateReport_Click_GetAccData() As String = {"Could not get the accounting data from the table", "We were unable to get the accounting data from the database table, please check the support or report te bug", "ERR011_btnGenerateReport_Click_GetAccData"}
+    Public ERR012_btnViewReport_Click_frmOverAlLReports() As String = {"Date selection error!", "You cannot have 'from' later than 'to' in the dates field." & vbCrLf & "Please fix your date selection!", "ERR012_btnViewReport_Click_frmOverAlLReports"}
 End Module
