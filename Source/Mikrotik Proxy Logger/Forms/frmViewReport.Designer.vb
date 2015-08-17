@@ -23,16 +23,6 @@ Partial Class frmViewReport
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dgReportMain = New System.Windows.Forms.DataGridView()
-        Me.dg_col_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_logdatetime = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_logheader = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_logsource = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_logmethod = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_logportno = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_logurl = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_logaction = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_reqcached = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_flag = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblDeviceIP = New System.Windows.Forms.Label()
         Me.lblDeviceName = New System.Windows.Forms.Label()
@@ -60,6 +50,16 @@ Partial Class frmViewReport
         Me.Label13 = New System.Windows.Forms.Label()
         Me.lblUPDWUsage = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.dg_col_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_logdatetime = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_logheader = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_logsource = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_logmethod = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_logportno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_logurl = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_logaction = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_reqcached = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_flag = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgReportMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -78,85 +78,6 @@ Partial Class frmViewReport
         Me.dgReportMain.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgReportMain.Size = New System.Drawing.Size(695, 358)
         Me.dgReportMain.TabIndex = 0
-        '
-        'dg_col_id
-        '
-        Me.dg_col_id.DataPropertyName = "id"
-        Me.dg_col_id.HeaderText = "id"
-        Me.dg_col_id.Name = "dg_col_id"
-        Me.dg_col_id.ReadOnly = True
-        Me.dg_col_id.Visible = False
-        '
-        'dg_col_logdatetime
-        '
-        Me.dg_col_logdatetime.DataPropertyName = "logdatetime"
-        Me.dg_col_logdatetime.HeaderText = "Date/Time"
-        Me.dg_col_logdatetime.Name = "dg_col_logdatetime"
-        Me.dg_col_logdatetime.ReadOnly = True
-        Me.dg_col_logdatetime.Width = 120
-        '
-        'dg_col_logheader
-        '
-        Me.dg_col_logheader.DataPropertyName = "logheader"
-        Me.dg_col_logheader.HeaderText = "logheader"
-        Me.dg_col_logheader.Name = "dg_col_logheader"
-        Me.dg_col_logheader.ReadOnly = True
-        Me.dg_col_logheader.Visible = False
-        '
-        'dg_col_logsource
-        '
-        Me.dg_col_logsource.DataPropertyName = "logsource"
-        Me.dg_col_logsource.HeaderText = "logsource"
-        Me.dg_col_logsource.Name = "dg_col_logsource"
-        Me.dg_col_logsource.ReadOnly = True
-        Me.dg_col_logsource.Visible = False
-        '
-        'dg_col_logmethod
-        '
-        Me.dg_col_logmethod.DataPropertyName = "logmethod"
-        Me.dg_col_logmethod.HeaderText = "logmethod"
-        Me.dg_col_logmethod.Name = "dg_col_logmethod"
-        Me.dg_col_logmethod.ReadOnly = True
-        Me.dg_col_logmethod.Visible = False
-        '
-        'dg_col_logportno
-        '
-        Me.dg_col_logportno.DataPropertyName = "logportno"
-        Me.dg_col_logportno.HeaderText = "logportno"
-        Me.dg_col_logportno.Name = "dg_col_logportno"
-        Me.dg_col_logportno.ReadOnly = True
-        Me.dg_col_logportno.Visible = False
-        '
-        'dg_col_logurl
-        '
-        Me.dg_col_logurl.DataPropertyName = "logurl"
-        Me.dg_col_logurl.HeaderText = "Requested URL"
-        Me.dg_col_logurl.Name = "dg_col_logurl"
-        Me.dg_col_logurl.ReadOnly = True
-        Me.dg_col_logurl.Width = 360
-        '
-        'dg_col_logaction
-        '
-        Me.dg_col_logaction.DataPropertyName = "logaction"
-        Me.dg_col_logaction.HeaderText = "Action"
-        Me.dg_col_logaction.Name = "dg_col_logaction"
-        Me.dg_col_logaction.ReadOnly = True
-        '
-        'dg_col_reqcached
-        '
-        Me.dg_col_reqcached.DataPropertyName = "reqcached"
-        Me.dg_col_reqcached.HeaderText = "reqcached"
-        Me.dg_col_reqcached.Name = "dg_col_reqcached"
-        Me.dg_col_reqcached.ReadOnly = True
-        Me.dg_col_reqcached.Visible = False
-        '
-        'dg_col_flag
-        '
-        Me.dg_col_flag.DataPropertyName = "flag"
-        Me.dg_col_flag.HeaderText = "flag"
-        Me.dg_col_flag.Name = "dg_col_flag"
-        Me.dg_col_flag.ReadOnly = True
-        Me.dg_col_flag.Visible = False
         '
         'Label1
         '
@@ -265,34 +186,34 @@ Partial Class frmViewReport
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(13, 479)
+        Me.Label6.Location = New System.Drawing.Point(34, 469)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(279, 13)
+        Me.Label6.Size = New System.Drawing.Size(110, 13)
         Me.Label6.TabIndex = 12
-        Me.Label6.Text = "Total bandwidth (download) usage in the selected period"
+        Me.Label6.Text = "User download usage"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(35, 564)
+        Me.Label7.Location = New System.Drawing.Point(32, 541)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(257, 13)
+        Me.Label7.Size = New System.Drawing.Size(112, 13)
         Me.Label7.TabIndex = 13
-        Me.Label7.Text = "Total overall bandwidth usage in the selected period"
+        Me.Label7.Text = "Total download usage"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(51, 608)
+        Me.Label8.Location = New System.Drawing.Point(41, 573)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(241, 13)
+        Me.Label8.Size = New System.Drawing.Size(103, 13)
         Me.Label8.TabIndex = 14
-        Me.Label8.Text = "Total bandwidth usage percentage of the overall"
+        Me.Label8.Text = "Bandwidth usage %"
         '
         'lblBWUsage
         '
         Me.lblBWUsage.AutoSize = True
-        Me.lblBWUsage.Location = New System.Drawing.Point(295, 479)
+        Me.lblBWUsage.Location = New System.Drawing.Point(150, 469)
         Me.lblBWUsage.Name = "lblBWUsage"
         Me.lblBWUsage.Size = New System.Drawing.Size(63, 13)
         Me.lblBWUsage.TabIndex = 16
@@ -301,7 +222,7 @@ Partial Class frmViewReport
         'lblTotalUsage
         '
         Me.lblTotalUsage.AutoSize = True
-        Me.lblTotalUsage.Location = New System.Drawing.Point(298, 564)
+        Me.lblTotalUsage.Location = New System.Drawing.Point(150, 541)
         Me.lblTotalUsage.Name = "lblTotalUsage"
         Me.lblTotalUsage.Size = New System.Drawing.Size(71, 13)
         Me.lblTotalUsage.TabIndex = 17
@@ -310,7 +231,7 @@ Partial Class frmViewReport
         'lblUsagePercentageBytes
         '
         Me.lblUsagePercentageBytes.AutoSize = True
-        Me.lblUsagePercentageBytes.Location = New System.Drawing.Point(298, 608)
+        Me.lblUsagePercentageBytes.Location = New System.Drawing.Point(150, 573)
         Me.lblUsagePercentageBytes.Name = "lblUsagePercentageBytes"
         Me.lblUsagePercentageBytes.Size = New System.Drawing.Size(129, 13)
         Me.lblUsagePercentageBytes.TabIndex = 18
@@ -319,7 +240,7 @@ Partial Class frmViewReport
         'lblPacketsCount
         '
         Me.lblPacketsCount.AutoSize = True
-        Me.lblPacketsCount.Location = New System.Drawing.Point(295, 492)
+        Me.lblPacketsCount.Location = New System.Drawing.Point(150, 482)
         Me.lblPacketsCount.Name = "lblPacketsCount"
         Me.lblPacketsCount.Size = New System.Drawing.Size(83, 13)
         Me.lblPacketsCount.TabIndex = 20
@@ -328,16 +249,16 @@ Partial Class frmViewReport
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(161, 492)
+        Me.Label10.Location = New System.Drawing.Point(9, 482)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(131, 13)
+        Me.Label10.Size = New System.Drawing.Size(135, 13)
         Me.Label10.TabIndex = 19
-        Me.Label10.Text = "Packets (download) count"
+        Me.Label10.Text = "Packets requested by user"
         '
         'lblTotalPackets
         '
         Me.lblTotalPackets.AutoSize = True
-        Me.lblTotalPackets.Location = New System.Drawing.Point(298, 577)
+        Me.lblTotalPackets.Location = New System.Drawing.Point(150, 554)
         Me.lblTotalPackets.Name = "lblTotalPackets"
         Me.lblTotalPackets.Size = New System.Drawing.Size(78, 13)
         Me.lblTotalPackets.TabIndex = 22
@@ -346,7 +267,7 @@ Partial Class frmViewReport
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(191, 577)
+        Me.Label11.Location = New System.Drawing.Point(43, 554)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(101, 13)
         Me.Label11.TabIndex = 21
@@ -355,7 +276,7 @@ Partial Class frmViewReport
         'lblUsagePercentagePackets
         '
         Me.lblUsagePercentagePackets.AutoSize = True
-        Me.lblUsagePercentagePackets.Location = New System.Drawing.Point(298, 621)
+        Me.lblUsagePercentagePackets.Location = New System.Drawing.Point(150, 586)
         Me.lblUsagePercentagePackets.Name = "lblUsagePercentagePackets"
         Me.lblUsagePercentagePackets.Size = New System.Drawing.Size(139, 13)
         Me.lblUsagePercentagePackets.TabIndex = 24
@@ -364,16 +285,16 @@ Partial Class frmViewReport
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(96, 621)
+        Me.Label12.Location = New System.Drawing.Point(34, 586)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(196, 13)
+        Me.Label12.Size = New System.Drawing.Size(110, 13)
         Me.Label12.TabIndex = 23
-        Me.Label12.Text = "Total packets percentage of the overall"
+        Me.Label12.Text = "Packets requested %"
         '
         'lblUPBWPackets
         '
         Me.lblUPBWPackets.AutoSize = True
-        Me.lblUPBWPackets.Location = New System.Drawing.Point(295, 527)
+        Me.lblUPBWPackets.Location = New System.Drawing.Point(150, 517)
         Me.lblUPBWPackets.Name = "lblUPBWPackets"
         Me.lblUPBWPackets.Size = New System.Drawing.Size(83, 13)
         Me.lblUPBWPackets.TabIndex = 28
@@ -382,16 +303,16 @@ Partial Class frmViewReport
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(175, 527)
+        Me.Label13.Location = New System.Drawing.Point(37, 517)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(117, 13)
+        Me.Label13.Size = New System.Drawing.Size(107, 13)
         Me.Label13.TabIndex = 27
-        Me.Label13.Text = "Packets (upload) count"
+        Me.Label13.Text = "Packets sent by user"
         '
         'lblUPDWUsage
         '
         Me.lblUPDWUsage.AutoSize = True
-        Me.lblUPDWUsage.Location = New System.Drawing.Point(295, 514)
+        Me.lblUPDWUsage.Location = New System.Drawing.Point(150, 504)
         Me.lblUPDWUsage.Name = "lblUPDWUsage"
         Me.lblUPDWUsage.Size = New System.Drawing.Size(77, 13)
         Me.lblUPDWUsage.TabIndex = 26
@@ -400,11 +321,93 @@ Partial Class frmViewReport
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(27, 514)
+        Me.Label15.Location = New System.Drawing.Point(48, 504)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(265, 13)
+        Me.Label15.Size = New System.Drawing.Size(96, 13)
         Me.Label15.TabIndex = 25
-        Me.Label15.Text = "Total bandwidth (upload) usage in the selected period"
+        Me.Label15.Text = "User upload usage"
+        '
+        'dg_col_id
+        '
+        Me.dg_col_id.DataPropertyName = "id"
+        Me.dg_col_id.HeaderText = "id"
+        Me.dg_col_id.Name = "dg_col_id"
+        Me.dg_col_id.ReadOnly = True
+        Me.dg_col_id.Visible = False
+        '
+        'dg_col_logdatetime
+        '
+        Me.dg_col_logdatetime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.dg_col_logdatetime.DataPropertyName = "logdatetime"
+        Me.dg_col_logdatetime.HeaderText = "Date/Time"
+        Me.dg_col_logdatetime.Name = "dg_col_logdatetime"
+        Me.dg_col_logdatetime.ReadOnly = True
+        Me.dg_col_logdatetime.Width = 81
+        '
+        'dg_col_logheader
+        '
+        Me.dg_col_logheader.DataPropertyName = "logheader"
+        Me.dg_col_logheader.HeaderText = "logheader"
+        Me.dg_col_logheader.Name = "dg_col_logheader"
+        Me.dg_col_logheader.ReadOnly = True
+        Me.dg_col_logheader.Visible = False
+        '
+        'dg_col_logsource
+        '
+        Me.dg_col_logsource.DataPropertyName = "logsource"
+        Me.dg_col_logsource.HeaderText = "logsource"
+        Me.dg_col_logsource.Name = "dg_col_logsource"
+        Me.dg_col_logsource.ReadOnly = True
+        Me.dg_col_logsource.Visible = False
+        '
+        'dg_col_logmethod
+        '
+        Me.dg_col_logmethod.DataPropertyName = "logmethod"
+        Me.dg_col_logmethod.HeaderText = "logmethod"
+        Me.dg_col_logmethod.Name = "dg_col_logmethod"
+        Me.dg_col_logmethod.ReadOnly = True
+        Me.dg_col_logmethod.Visible = False
+        '
+        'dg_col_logportno
+        '
+        Me.dg_col_logportno.DataPropertyName = "logportno"
+        Me.dg_col_logportno.HeaderText = "logportno"
+        Me.dg_col_logportno.Name = "dg_col_logportno"
+        Me.dg_col_logportno.ReadOnly = True
+        Me.dg_col_logportno.Visible = False
+        '
+        'dg_col_logurl
+        '
+        Me.dg_col_logurl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.dg_col_logurl.DataPropertyName = "logurl"
+        Me.dg_col_logurl.HeaderText = "Requested URL"
+        Me.dg_col_logurl.Name = "dg_col_logurl"
+        Me.dg_col_logurl.ReadOnly = True
+        '
+        'dg_col_logaction
+        '
+        Me.dg_col_logaction.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.dg_col_logaction.DataPropertyName = "logaction"
+        Me.dg_col_logaction.HeaderText = "Action"
+        Me.dg_col_logaction.Name = "dg_col_logaction"
+        Me.dg_col_logaction.ReadOnly = True
+        Me.dg_col_logaction.Width = 62
+        '
+        'dg_col_reqcached
+        '
+        Me.dg_col_reqcached.DataPropertyName = "reqcached"
+        Me.dg_col_reqcached.HeaderText = "reqcached"
+        Me.dg_col_reqcached.Name = "dg_col_reqcached"
+        Me.dg_col_reqcached.ReadOnly = True
+        Me.dg_col_reqcached.Visible = False
+        '
+        'dg_col_flag
+        '
+        Me.dg_col_flag.DataPropertyName = "flag"
+        Me.dg_col_flag.HeaderText = "flag"
+        Me.dg_col_flag.Name = "dg_col_flag"
+        Me.dg_col_flag.ReadOnly = True
+        Me.dg_col_flag.Visible = False
         '
         'frmViewReport
         '
@@ -459,16 +462,6 @@ Partial Class frmViewReport
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents btnPrint As System.Windows.Forms.Button
     Friend WithEvents btnExport As System.Windows.Forms.Button
-    Friend WithEvents dg_col_id As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents dg_col_logdatetime As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents dg_col_logheader As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents dg_col_logsource As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents dg_col_logmethod As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents dg_col_logportno As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents dg_col_logurl As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents dg_col_logaction As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents dg_col_reqcached As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents dg_col_flag As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
@@ -485,4 +478,14 @@ Partial Class frmViewReport
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents lblUPDWUsage As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents dg_col_id As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dg_col_logdatetime As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dg_col_logheader As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dg_col_logsource As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dg_col_logmethod As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dg_col_logportno As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dg_col_logurl As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dg_col_logaction As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dg_col_reqcached As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents dg_col_flag As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

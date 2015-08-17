@@ -25,6 +25,7 @@ Public Class MTPL_Listener
             If ChkDB.pingDB = 0 Then
                 '
                 'starting the listener thread
+                MikrotikAccounotingURL = "http://" & Config_MT_IP & "/accounting/ip.cgi"
                 thrd_listenLogs = New Thread(AddressOf StartListener)
                 thrd_listenLogs.IsBackground = True
                 thrd_listenLogs.Start()
@@ -135,8 +136,9 @@ Public Class MTPL_Listener
                     progress = 53
                     logMSG(6) = rawlogMSG(5)
                     progress = 53
-                    actionMsg = logMSG(5).Split("=")
-                    cacheMsg = logMSG(6).Split("=")
+                    actionMsg = logMSG(6).Split("=")
+                    cacheMsg(0) = ""
+                    cacheMsg(1) = ""
                 ElseIf msgLength = 8 Then 'we have a long message
                     logMSG(3) = 0
                     progress = 51
@@ -160,7 +162,12 @@ Public Class MTPL_Listener
                     actionMsg = logMSG(5).Split("=")
                     cacheMsg = logMSG(6).Split("=")
                 End If
-                dbOps.addLog(DateTime.Now, logMSG(0), logMSG(1), logMSG(2), logMSG(3), logMSG(4), actionMsg(1), cacheMsg(1), 0)
+                'we will be checking if the URL we will save in the database is not actually the accounting page url, we do not want to save that.
+                If logMSG(4) = MikrotikAccounotingURL Then
+                    'do nothing
+                Else
+                    dbOps.addLog(DateTime.Now, logMSG(0), logMSG(1), logMSG(2), logMSG(3), logMSG(4), actionMsg(1), cacheMsg(1), 0)
+                End If
                 progress = 7
                 ' ------------------------------------------------------------------------------
             End While
@@ -183,8 +190,9 @@ Public Class MTPL_Listener
         Dim webresponse As WebResponse
         Dim msgData(5) As String
         webRequest.Timeout = 30000
+
         Do
-            webRequest = webRequest.Create("http://" & Config_MT_IP & "/accounting/ip.cgi")
+            webRequest = webRequest.Create(MikrotikAccounotingURL)
             webresponse = webRequest.GetResponse()
             inStream = New StreamReader(webresponse.GetResponseStream())
             Do While inStream.EndOfStream = False

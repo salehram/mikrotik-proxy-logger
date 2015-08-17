@@ -152,6 +152,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Net.Framework.3.5.SP1"
+                    {
+                    "Name" = "8:.NET Framework 3.5 SP1"
+                    "ProductCode" = "8:Microsoft.Net.Framework.3.5.SP1"
+                    }
+                }
             }
         }
         "Release"
@@ -176,6 +184,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Net.Framework.3.5.SP1"
+                    {
+                    "Name" = "8:.NET Framework 3.5 SP1"
+                    "ProductCode" = "8:Microsoft.Net.Framework.3.5.SP1"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.SqlServer.Express.10.5"
+                    {
+                    "Name" = "8:SQL Server 2008 R2 Express"
+                    "ProductCode" = "8:Microsoft.SqlServer.Express.10.5"
+                    }
+                }
             }
         }
     }
@@ -541,7 +562,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Mikrotik Proxy Logger"
         "ProductCode" = "8:{329A5FBC-C730-4AF9-9C10-726E2568202F}"
-        "PackageCode" = "8:{0A548F32-24E6-4694-9956-BCE3B5C16287}"
+        "PackageCode" = "8:{1D48FC10-E78B-4DA2-8939-79270DA27FDC}"
         "UpgradeCode" = "8:{5F52F130-CA96-41C1-AC37-BF9252F3E4C5}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

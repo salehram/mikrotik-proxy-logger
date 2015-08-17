@@ -60,6 +60,8 @@ Partial Class frmMain
         Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ServiceController1 = New System.ServiceProcess.ServiceController()
+        Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.smOverallReport = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -221,10 +223,10 @@ Partial Class frmMain
         '
         'SingleUserReportsToolStripMenuItem
         '
-        Me.SingleUserReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.smSingleUserReport, Me.GenerateSingleUserReportToolStripMenuItem})
+        Me.SingleUserReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.smSingleUserReport, Me.GenerateSingleUserReportToolStripMenuItem, Me.ToolStripMenuItem6, Me.smOverallReport})
         Me.SingleUserReportsToolStripMenuItem.Name = "SingleUserReportsToolStripMenuItem"
         Me.SingleUserReportsToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
-        Me.SingleUserReportsToolStripMenuItem.Text = "Single user reports"
+        Me.SingleUserReportsToolStripMenuItem.Text = "Predefined reports"
         '
         'smSingleUserReport
         '
@@ -296,6 +298,17 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.AboutToolStripMenuItem.Text = "About"
         '
+        'ToolStripMenuItem6
+        '
+        Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
+        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(212, 6)
+        '
+        'smOverallReport
+        '
+        Me.smOverallReport.Name = "smOverallReport"
+        Me.smOverallReport.Size = New System.Drawing.Size(215, 22)
+        Me.smOverallReport.Text = "Overall usage report"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -354,5 +367,7 @@ Partial Class frmMain
     Friend WithEvents SingleUserReportsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents smSingleUserReport As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GenerateSingleUserReportToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem6 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents smOverallReport As System.Windows.Forms.ToolStripMenuItem
 
 End Class

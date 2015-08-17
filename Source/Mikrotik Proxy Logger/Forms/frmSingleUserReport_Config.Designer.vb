@@ -34,6 +34,7 @@ Partial Class frmSingleUserReport_Config
         Me.Label3 = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnGenerateReport = New System.Windows.Forms.Button()
+        Me.chkAllTimeData = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -70,6 +71,7 @@ Partial Class frmSingleUserReport_Config
         'GroupBox1
         '
         Me.GroupBox1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.GroupBox1.Controls.Add(Me.chkAllTimeData)
         Me.GroupBox1.Controls.Add(Me.DtTillDate)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.dtFromDate)
@@ -158,6 +160,16 @@ Partial Class frmSingleUserReport_Config
         Me.btnGenerateReport.Text = "Generate Report"
         Me.btnGenerateReport.UseVisualStyleBackColor = True
         '
+        'chkAllTimeData
+        '
+        Me.chkAllTimeData.AutoSize = True
+        Me.chkAllTimeData.Location = New System.Drawing.Point(249, 17)
+        Me.chkAllTimeData.Name = "chkAllTimeData"
+        Me.chkAllTimeData.Size = New System.Drawing.Size(109, 30)
+        Me.chkAllTimeData.TabIndex = 4
+        Me.chkAllTimeData.Text = "No date range," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "View all time data"
+        Me.chkAllTimeData.UseVisualStyleBackColor = True
+        '
         'frmSingleUserReport_Config
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -192,4 +204,5 @@ Partial Class frmSingleUserReport_Config
     Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents btnGenerateReport As System.Windows.Forms.Button
     Friend WithEvents DtTillDate As System.Windows.Forms.DateTimePicker
+    Friend WithEvents chkAllTimeData As System.Windows.Forms.CheckBox
 End Class

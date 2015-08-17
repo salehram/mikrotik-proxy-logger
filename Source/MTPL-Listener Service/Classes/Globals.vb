@@ -18,6 +18,7 @@ Module Globals
     Public Config_DB_User_Name As String 'the database server user name as in the configuration file
     Public Config_DB_Password As String 'the database user password as in the configuration file
     Public Config_MT_IP As String 'the IP address of the mikrotik, this is used to get accounting data
+    Public MikrotikAccounotingURL As String 'complete URL of the mikrotik accounting page
     '
     'errors and messages constants
     Public ERR00_NOSETUP() As String = {"Could not find configuratio file", "We did not find the configuration file file, do you want to create one now?", "ERR00_NOSETUP"}
