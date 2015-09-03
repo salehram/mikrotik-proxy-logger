@@ -36,7 +36,14 @@ Public Class frmViewReport
         printMode = 1
         '
         'showing the print form
+        If printConfig.ShowDialog = Windows.Forms.DialogResult.OK Then
+            prepareReport.PrinterSettings = printConfig.PrinterSettings
+        End If
         PrintPreviewDialog1.Document = prepareReport
-        PrintPreviewDialog1.ShowDialog()
+        PrintPreviewDialog1.MdiParent = frmMain
+        PrintPreviewDialog1.Show()
+        'frmPrintPreview.PrintPreviewControl1.Document = prepareReport
+        'frmPrintPreview.MdiParent = frmMain
+        'frmPrintPreview.Show()
     End Sub
 End Class

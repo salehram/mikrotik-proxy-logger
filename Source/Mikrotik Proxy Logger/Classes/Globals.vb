@@ -27,6 +27,7 @@ Module Globals
     Public reportHeaderDetailsLine7 As String
     Public reportHeaderDetailsLine8 As String
     Public printMode As Integer = 0 'defines the printing mode: 0=nothing, 1=single user report, 2=overall users report
+    Public reportLoaded As Boolean
     '
     'global objects
     'global dataset objects

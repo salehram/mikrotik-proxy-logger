@@ -62,6 +62,7 @@ Partial Class frmViewReport
         Me.lblUPDWUsage = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.printConfig = New System.Windows.Forms.PrintDialog()
         CType(Me.dgReportMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -421,6 +422,10 @@ Partial Class frmViewReport
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
         '
+        'printConfig
+        '
+        Me.printConfig.UseEXDialog = True
+        '
         'frmViewReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -501,4 +506,5 @@ Partial Class frmViewReport
     Friend WithEvents dg_col_reqcached As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents dg_col_flag As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PrintPreviewDialog1 As System.Windows.Forms.PrintPreviewDialog
+    Friend WithEvents printConfig As System.Windows.Forms.PrintDialog
 End Class
