@@ -18,5 +18,7 @@
 
     Private Sub frmPrintPreview_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         PrintPreviewControl1.Document = printReport
+        PrintPreviewDialog1.Document = printReport
+        PrintPreviewDialog1.ShowDialog()
     End Sub
 End Class

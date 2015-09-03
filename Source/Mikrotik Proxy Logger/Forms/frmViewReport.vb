@@ -1,7 +1,7 @@
 ﻿Imports System.Windows.Forms.DataVisualization.Charting
 
 Public Class frmViewReport
-    Private prepareReport As PrintClass
+    Dim prepareReport As New PrintClass
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         '
@@ -21,8 +21,8 @@ Public Class frmViewReport
         reportHeaderDetailsLine8 = ""
         '
         'assigning new values for reportHeadLine variables
-        reportHeadLine1 = lblDeviceIP.Text & " " & lblDeviceName.Text
-        reportHeadLine2 = lblFromDate.Text & " " & lblToDate.Text
+        reportHeadLine1 = lblDeviceIP.Text & " - " & lblDeviceName.Text
+        reportHeadLine2 = "From: " & lblFromDate.Text & " to: " & lblToDate.Text
         reportHeaderDetailsLine1 = "User download usage (mb): " & lblBWUsage.Text
         reportHeaderDetailsLine2 = "Packets requested by user: " & lblPacketsCount.Text
         reportHeaderDetailsLine3 = "User upload usage (mb): " & lblUPBWPackets.Text
@@ -36,7 +36,7 @@ Public Class frmViewReport
         printMode = 1
         '
         'showing the print form
-        frmPrintPreview.MdiParent = frmMain
-        frmPrintPreview.Show()
+        PrintPreviewDialog1.Document = prepareReport
+        PrintPreviewDialog1.ShowDialog()
     End Sub
 End Class

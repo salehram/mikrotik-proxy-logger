@@ -22,6 +22,7 @@ Partial Class frmViewReport
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmViewReport))
         Me.dgReportMain = New System.Windows.Forms.DataGridView()
         Me.dg_col_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dg_col_logdatetime = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -60,7 +61,7 @@ Partial Class frmViewReport
         Me.Label13 = New System.Windows.Forms.Label()
         Me.lblUPDWUsage = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         CType(Me.dgReportMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -410,6 +411,16 @@ Partial Class frmViewReport
         Me.Label15.TabIndex = 25
         Me.Label15.Text = "User upload usage"
         '
+        'PrintPreviewDialog1
+        '
+        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialog1.Enabled = True
+        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
+        Me.PrintPreviewDialog1.Visible = False
+        '
         'frmViewReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -489,5 +500,5 @@ Partial Class frmViewReport
     Friend WithEvents dg_col_logaction As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents dg_col_reqcached As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents dg_col_flag As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
+    Friend WithEvents PrintPreviewDialog1 As System.Windows.Forms.PrintPreviewDialog
 End Class

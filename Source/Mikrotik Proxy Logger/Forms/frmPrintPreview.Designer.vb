@@ -102,7 +102,7 @@ Partial Class frmPrintPreview
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmPrintPreview"
-        Me.Text = "frmPrintPreview"
+        Me.Text = "Report Preview"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
