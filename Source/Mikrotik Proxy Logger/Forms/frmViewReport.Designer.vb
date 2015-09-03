@@ -23,6 +23,16 @@ Partial Class frmViewReport
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dgReportMain = New System.Windows.Forms.DataGridView()
+        Me.dg_col_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_logdatetime = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_logheader = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_logsource = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_logmethod = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_logportno = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_logurl = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_logaction = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_reqcached = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dg_col_flag = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblDeviceIP = New System.Windows.Forms.Label()
         Me.lblDeviceName = New System.Windows.Forms.Label()
@@ -50,16 +60,7 @@ Partial Class frmViewReport
         Me.Label13 = New System.Windows.Forms.Label()
         Me.lblUPDWUsage = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.dg_col_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_logdatetime = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_logheader = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_logsource = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_logmethod = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_logportno = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_logurl = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_logaction = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_reqcached = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dg_col_flag = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         CType(Me.dgReportMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -78,6 +79,88 @@ Partial Class frmViewReport
         Me.dgReportMain.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgReportMain.Size = New System.Drawing.Size(695, 358)
         Me.dgReportMain.TabIndex = 0
+        '
+        'dg_col_id
+        '
+        Me.dg_col_id.DataPropertyName = "id"
+        Me.dg_col_id.HeaderText = "id"
+        Me.dg_col_id.Name = "dg_col_id"
+        Me.dg_col_id.ReadOnly = True
+        Me.dg_col_id.Visible = False
+        '
+        'dg_col_logdatetime
+        '
+        Me.dg_col_logdatetime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.dg_col_logdatetime.DataPropertyName = "logdatetime"
+        Me.dg_col_logdatetime.HeaderText = "Date/Time"
+        Me.dg_col_logdatetime.Name = "dg_col_logdatetime"
+        Me.dg_col_logdatetime.ReadOnly = True
+        Me.dg_col_logdatetime.Width = 81
+        '
+        'dg_col_logheader
+        '
+        Me.dg_col_logheader.DataPropertyName = "logheader"
+        Me.dg_col_logheader.HeaderText = "logheader"
+        Me.dg_col_logheader.Name = "dg_col_logheader"
+        Me.dg_col_logheader.ReadOnly = True
+        Me.dg_col_logheader.Visible = False
+        '
+        'dg_col_logsource
+        '
+        Me.dg_col_logsource.DataPropertyName = "logsource"
+        Me.dg_col_logsource.HeaderText = "logsource"
+        Me.dg_col_logsource.Name = "dg_col_logsource"
+        Me.dg_col_logsource.ReadOnly = True
+        Me.dg_col_logsource.Visible = False
+        '
+        'dg_col_logmethod
+        '
+        Me.dg_col_logmethod.DataPropertyName = "logmethod"
+        Me.dg_col_logmethod.HeaderText = "logmethod"
+        Me.dg_col_logmethod.Name = "dg_col_logmethod"
+        Me.dg_col_logmethod.ReadOnly = True
+        Me.dg_col_logmethod.Visible = False
+        '
+        'dg_col_logportno
+        '
+        Me.dg_col_logportno.DataPropertyName = "logportno"
+        Me.dg_col_logportno.HeaderText = "logportno"
+        Me.dg_col_logportno.Name = "dg_col_logportno"
+        Me.dg_col_logportno.ReadOnly = True
+        Me.dg_col_logportno.Visible = False
+        '
+        'dg_col_logurl
+        '
+        Me.dg_col_logurl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.dg_col_logurl.DataPropertyName = "logurl"
+        Me.dg_col_logurl.HeaderText = "Requested URL"
+        Me.dg_col_logurl.Name = "dg_col_logurl"
+        Me.dg_col_logurl.ReadOnly = True
+        '
+        'dg_col_logaction
+        '
+        Me.dg_col_logaction.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
+        Me.dg_col_logaction.DataPropertyName = "logaction"
+        Me.dg_col_logaction.HeaderText = "Action"
+        Me.dg_col_logaction.Name = "dg_col_logaction"
+        Me.dg_col_logaction.ReadOnly = True
+        Me.dg_col_logaction.Width = 62
+        '
+        'dg_col_reqcached
+        '
+        Me.dg_col_reqcached.DataPropertyName = "reqcached"
+        Me.dg_col_reqcached.HeaderText = "reqcached"
+        Me.dg_col_reqcached.Name = "dg_col_reqcached"
+        Me.dg_col_reqcached.ReadOnly = True
+        Me.dg_col_reqcached.Visible = False
+        '
+        'dg_col_flag
+        '
+        Me.dg_col_flag.DataPropertyName = "flag"
+        Me.dg_col_flag.HeaderText = "flag"
+        Me.dg_col_flag.Name = "dg_col_flag"
+        Me.dg_col_flag.ReadOnly = True
+        Me.dg_col_flag.Visible = False
         '
         'Label1
         '
@@ -327,88 +410,6 @@ Partial Class frmViewReport
         Me.Label15.TabIndex = 25
         Me.Label15.Text = "User upload usage"
         '
-        'dg_col_id
-        '
-        Me.dg_col_id.DataPropertyName = "id"
-        Me.dg_col_id.HeaderText = "id"
-        Me.dg_col_id.Name = "dg_col_id"
-        Me.dg_col_id.ReadOnly = True
-        Me.dg_col_id.Visible = False
-        '
-        'dg_col_logdatetime
-        '
-        Me.dg_col_logdatetime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.dg_col_logdatetime.DataPropertyName = "logdatetime"
-        Me.dg_col_logdatetime.HeaderText = "Date/Time"
-        Me.dg_col_logdatetime.Name = "dg_col_logdatetime"
-        Me.dg_col_logdatetime.ReadOnly = True
-        Me.dg_col_logdatetime.Width = 81
-        '
-        'dg_col_logheader
-        '
-        Me.dg_col_logheader.DataPropertyName = "logheader"
-        Me.dg_col_logheader.HeaderText = "logheader"
-        Me.dg_col_logheader.Name = "dg_col_logheader"
-        Me.dg_col_logheader.ReadOnly = True
-        Me.dg_col_logheader.Visible = False
-        '
-        'dg_col_logsource
-        '
-        Me.dg_col_logsource.DataPropertyName = "logsource"
-        Me.dg_col_logsource.HeaderText = "logsource"
-        Me.dg_col_logsource.Name = "dg_col_logsource"
-        Me.dg_col_logsource.ReadOnly = True
-        Me.dg_col_logsource.Visible = False
-        '
-        'dg_col_logmethod
-        '
-        Me.dg_col_logmethod.DataPropertyName = "logmethod"
-        Me.dg_col_logmethod.HeaderText = "logmethod"
-        Me.dg_col_logmethod.Name = "dg_col_logmethod"
-        Me.dg_col_logmethod.ReadOnly = True
-        Me.dg_col_logmethod.Visible = False
-        '
-        'dg_col_logportno
-        '
-        Me.dg_col_logportno.DataPropertyName = "logportno"
-        Me.dg_col_logportno.HeaderText = "logportno"
-        Me.dg_col_logportno.Name = "dg_col_logportno"
-        Me.dg_col_logportno.ReadOnly = True
-        Me.dg_col_logportno.Visible = False
-        '
-        'dg_col_logurl
-        '
-        Me.dg_col_logurl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.dg_col_logurl.DataPropertyName = "logurl"
-        Me.dg_col_logurl.HeaderText = "Requested URL"
-        Me.dg_col_logurl.Name = "dg_col_logurl"
-        Me.dg_col_logurl.ReadOnly = True
-        '
-        'dg_col_logaction
-        '
-        Me.dg_col_logaction.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells
-        Me.dg_col_logaction.DataPropertyName = "logaction"
-        Me.dg_col_logaction.HeaderText = "Action"
-        Me.dg_col_logaction.Name = "dg_col_logaction"
-        Me.dg_col_logaction.ReadOnly = True
-        Me.dg_col_logaction.Width = 62
-        '
-        'dg_col_reqcached
-        '
-        Me.dg_col_reqcached.DataPropertyName = "reqcached"
-        Me.dg_col_reqcached.HeaderText = "reqcached"
-        Me.dg_col_reqcached.Name = "dg_col_reqcached"
-        Me.dg_col_reqcached.ReadOnly = True
-        Me.dg_col_reqcached.Visible = False
-        '
-        'dg_col_flag
-        '
-        Me.dg_col_flag.DataPropertyName = "flag"
-        Me.dg_col_flag.HeaderText = "flag"
-        Me.dg_col_flag.Name = "dg_col_flag"
-        Me.dg_col_flag.ReadOnly = True
-        Me.dg_col_flag.Visible = False
-        '
         'frmViewReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -488,4 +489,5 @@ Partial Class frmViewReport
     Friend WithEvents dg_col_logaction As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents dg_col_reqcached As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents dg_col_flag As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
 End Class

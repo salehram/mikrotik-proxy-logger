@@ -5,9 +5,12 @@ Imports System.Data.SqlClient
 Imports System.Windows.Forms.DataVisualization
 Imports System.Windows.Forms.DataVisualization.Charting
 Imports Mikrotik_Proxy_Logger.Global_Functions
+Imports Mikrotik_Proxy_Logger.SQLCalls
 
 Public Class frmOverAllReport
     Dim GF As New Global_Functions
+    Dim SQLCalls As New SQLCalls
+    Dim ReportGridBuilder As New FullReportGridBuilder
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Dispose()
     End Sub
@@ -16,6 +19,7 @@ Public Class frmOverAllReport
         Dim fromDate As DateTime
         Dim toDate As DateTime
         Dim dateDifference As Integer
+        Dim DSInitStatus As Integer
         'start validating the from date and to date
         '
         'checking for "from" date variable
@@ -36,7 +40,7 @@ Public Class frmOverAllReport
             toDate = dtTo.Value
         Else
             '"to" date is set, we will use its value
-            toDate = dtFrom.Value
+            toDate = dtTo.Value
         End If
         '
         'validating the 2 dates
@@ -48,25 +52,124 @@ Public Class frmOverAllReport
             Case Is < 0
                 'from date is earlier than to date, which is the correct case we want
                 'start pulling data from the database so we can store it in a dataset we will create now
+                Dim CellID As String
+                Dim CellIPAddr As String
+                Dim CellDevName As String
+                Dim CellDLUsage As Int64
+                Dim CellPktDL As Int64
+                Dim CellUPUsage As Int64
+                Dim CellPktUp As Int64
+                Dim CellPercent As Double
+                Dim allUsageCount As Int64
+                Dim userUsageCount As Int64
+                Dim otherData As String()
                 '
+                '
+                '
+                '       id
+                '       ip address
+                '       device name
+                '       download usage
+                '       packets download
+                '       uploiad usage
+                '       packets upload
+                '       usage percentage
+                '   
                 '
                 '
                 'creating the dataset
+                '   initializing the dataset
+                DSInitStatus = GF.initDataset(0)
+                If DSInitStatus <> 0 Then Exit Sub 'TODO: Add error message here
+                '   read hosts table
+                '   select data from accounting table based on the current record from hosts table
+                '   put the retrieved data in the new dataset
                 Dim connectionString As String = DB_ConnectionString
                 Dim sqlConnection As New SqlConnection(connectionString)
-                Dim sqlAdapter As SqlDataAdapter
-                Dim dsSingleUserReport As New DataSet
+                Dim sqlDBReader As SqlDataReader
+                Dim sqlCMD As SqlCommand
                 Try
                     sqlConnection.Open()
                     If chkNoDate.Checked = True Then 'here we will select the data from the table with no date/time range
-                        sqlAdapter = New SqlDataAdapter("select * from mtpl_table1", sqlConnection)
+                        sqlCMD = New SqlCommand("select * from mtpl_hosts", sqlConnection)
+                        sqlDBReader = sqlCMD.ExecuteReader
+                        If sqlDBReader.HasRows = True Then
+                            Do While sqlDBReader.Read
+                                'read the current row, and send a query to get the current ip accounting information from accounting table
+                                With sqlDBReader
+                                    CellID = .GetInt32(0)
+                                    CellIPAddr = .GetString(1)
+                                    CellDevName = .GetString(2)
+                                    'getting upload data
+                                    otherData = SQLCalls.ExecReader("mtpl_accounting", "select SUM(bytes_vol), SUM(packets_count) from mtpl_accounting where src_addr='" & CellIPAddr & "'")
+                                    CellUPUsage = CType(otherData(0), Int64)
+                                    CellPktUp = CType(otherData(1), Int64)
+                                    'getting the download data
+                                    otherData = SQLCalls.ExecReader("mtpl_accounting", "select SUM(bytes_vol), SUM(packets_count) from mtpl_accounting where dst_addr='" & CellIPAddr & "'")
+                                    CellDLUsage = CType(otherData(0), Int64)
+                                    CellPktDL = CType(otherData(1), Int64)
+                                    'calculate the overall usage percentage
+                                    'all usage count
+                                    otherData = SQLCalls.ExecReader("mtpl_accounting", "select SUM(bytes_vol), SUM(packets_count) from mtpl_accounting")
+                                    allUsageCount = CType(otherData(0), Int64)
+                                    'user usage count
+                                    otherData = SQLCalls.ExecReader("mtpl_accounting", "select SUM(bytes_vol), SUM(packets_count) from mtpl_accounting where src_addr='" & CellIPAddr & "' or dst_addr='" & CellIPAddr & "'")
+                                    userUsageCount = CType(otherData(0), Int64)
+                                    'calculating the percentage
+                                    CellPercent = CType((userUsageCount / allUsageCount) * 100, Double)
+                                End With
+                                'adding the data to the dataset row
+                                With GlobalDataset.Tables(AllUsersReport_Dataset_Table.TableName).Rows
+                                    .Add(CellID, CellIPAddr, CellDevName, CellDLUsage, CellPktDL, CellUPUsage, CellPktUp, CellPercent)
+                                End With
+                            Loop
+                        End If
                     Else 'here we will select the data from the table with the specified date/time range
-                        sqlAdapter = New SqlDataAdapter("select * from mtpl_table1 where logdatetime between '" & fromDate & "' and '" & toDate & "'", sqlConnection)
+                        'sqlCMD = New SqlCommand("select * from mtpl_table1 where logdatetime between '" & fromDate & "' and '" & toDate & "'", sqlConnection)
+                        sqlCMD = New SqlCommand("select * from mtpl_hosts", sqlConnection)
+                        sqlDBReader = sqlCMD.ExecuteReader
+                        If sqlDBReader.HasRows = True Then
+                            Do While sqlDBReader.Read
+                                'read the current row, and send a query to get the current ip accounting information from accounting table
+                                With sqlDBReader
+                                    CellID = .GetInt32(0)
+                                    CellIPAddr = .GetString(1)
+                                    CellDevName = .GetString(2)
+                                    'getting upload data
+                                    otherData = SQLCalls.ExecReader("mtpl_accounting", "select SUM(bytes_vol), SUM(packets_count) from mtpl_accounting where src_addr='" & CellIPAddr & "' and logDate between '" & fromDate & "' and '" & toDate & "'")
+                                    CellUPUsage = CType(otherData(0), Int64)
+                                    CellPktUp = CType(otherData(1), Int64)
+                                    'getting the download data
+                                    otherData = SQLCalls.ExecReader("mtpl_accounting", "select SUM(bytes_vol), SUM(packets_count) from mtpl_accounting where dst_addr='" & CellIPAddr & "' and logDate between '" & fromDate & "' and '" & toDate & "'")
+                                    CellDLUsage = CType(otherData(0), Int64)
+                                    CellPktDL = CType(otherData(1), Int64)
+                                    'calculate the overall usage percentage
+                                    'all usage count
+                                    otherData = SQLCalls.ExecReader("mtpl_accounting", "select SUM(bytes_vol), SUM(packets_count) from mtpl_accounting where logDate between '" & fromDate & "' and '" & toDate & "'")
+                                    allUsageCount = CType(otherData(0), Int64)
+                                    'user usage count
+                                    otherData = SQLCalls.ExecReader("mtpl_accounting", "select SUM(bytes_vol), SUM(packets_count) from mtpl_accounting where src_addr='" & CellIPAddr & "' or dst_addr='" & CellIPAddr & "' and logDate between '" & fromDate & "' and '" & toDate & "'")
+                                    userUsageCount = CType(otherData(0), Int64)
+                                    'calculating the percentage
+                                    CellPercent = CType((userUsageCount / allUsageCount) * 100, Double)
+                                End With
+                                'adding the data to the dataset row
+                                With GlobalDataset.Tables(AllUsersReport_Dataset_Table.TableName).Rows
+                                    .Add(CellID, CellIPAddr, CellDevName, CellDLUsage, CellPktDL, CellUPUsage, CellPktUp, CellPercent)
+                                End With
+                            Loop
+                        End If
                     End If
-                    sqlAdapter.Fill(dsSingleUserReport, "mtpl_table1")
                     '
                     ' assigning the dataset to the datagrid view in the report form
-
+                    ReportGridBuilder.buildColumns(0)
+                    frmReportResults.dgReportResult.DataSource = GlobalDataset.Tables(AllUsersReport_Dataset_Table.TableName)
+                    '
+                    'formating the grid with readable numbers:
+                    ReportGridBuilder.FormatGridNumbers()
+                    'showing the results form
+                    frmReportResults.MdiParent = frmMain
+                    frmReportResults.Show()
                     sqlConnection.Close()
                     sqlConnection = Nothing
                     Me.Dispose()
@@ -75,6 +178,7 @@ Public Class frmOverAllReport
                     sqlConnection.Close()
                     sqlConnection = Nothing
                 End Try
+                '
                 '
                 '
                 'end of dataset creation

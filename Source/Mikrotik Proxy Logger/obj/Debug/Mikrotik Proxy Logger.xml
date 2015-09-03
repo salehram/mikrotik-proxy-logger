@@ -38,6 +38,36 @@ MikrotikProxyLogger
 	<param name="Text">The data that we want to write in the file</param>
 	<returns>0 as success, error message when fail</returns>
 	<remarks></remarks>
+</member><member name="M:Mikrotik_Proxy_Logger.Global_Functions.initDataset(System.Int32)">
+	<summary>
+ Function to initialize the global dataset
+ </summary>
+	<param name="DatasetType">The type of the table we want to initialize, 0=table for all users report</param>
+	<returns>0 for success operation, otherwise error code and message is returned</returns>
+	<remarks></remarks>
+</member><member name="M:Mikrotik_Proxy_Logger.Global_Functions.numberFormat(System.Int32)">
+	<summary>
+ A function to format the supploed number and return it with a formation of readable number
+ </summary>
+	<param name="Number">The number we want to format it as integer</param>
+	<returns>Formatted value of the number we supplied</returns>
+	<remarks></remarks>
+</member><member name="M:Mikrotik_Proxy_Logger.Global_Functions.numberFormat(System.Double,System.Int32)">
+	<summary>
+ A function to format the supploed number and return it with a formation of readable number
+ </summary>
+	<param name="Number">The number we want to format it as integer</param>
+	<param name="Decimals">The number of decimal numbers after the decimal separator</param>
+	<returns>Formatted value of the number we supplied</returns>
+	<remarks></remarks>
+</member><member name="M:Mikrotik_Proxy_Logger.SQLCalls.ExecReader(System.String,System.String)">
+	<summary>
+ Function to execute a query from SQLDatareader object and return the results in a string array
+ </summary>
+	<param name="TableName">The table name on which we want to execute the query on</param>
+	<param name="Query">The query we want to execute on the table</param>
+	<returns>Array with query results, or error code for failures</returns>
+	<remarks></remarks>
 </member><member name="M:Mikrotik_Proxy_Logger.CheckPrereqs.checkConfig">
 	<summary>
  Checks the configuration of the system, if no configuration file found, then we will switch to prerequisites check and assume this is the first run.
@@ -61,6 +91,17 @@ MikrotikProxyLogger
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
+</member><member name="M:Mikrotik_Proxy_Logger.FullReportGridBuilder.buildColumns(System.Int32)">
+	<summary>
+ Create the columns of the grid
+ </summary>
+	<param name="reportType">The type of the report: 0=all users report,</param>
+	<remarks></remarks>
+</member><member name="M:Mikrotik_Proxy_Logger.FullReportGridBuilder.FormatGridNumbers">
+	<summary>
+ Sub procedure to read and format the cells of the grid and make the numbers in a better readable format
+ </summary>
+	<remarks></remarks>
 </member>
 </members>
 </doc>

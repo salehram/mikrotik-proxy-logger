@@ -12,6 +12,7 @@ Imports System.Windows.Forms
 'F ShowMsg
 'S DisableApplicationMenus
 'F WriteFile
+'F initDataset
 
 Public Class Global_Functions
 
@@ -144,5 +145,57 @@ Public Class Global_Functions
         Catch ex As Exception
             Return ex.Message
         End Try
+    End Function
+
+    ''' <summary>
+    ''' Function to initialize the global dataset
+    ''' </summary>
+    ''' <param name="DatasetType">The type of the table we want to initialize, 0=table for all users report</param>
+    ''' <returns>0 for success operation, otherwise error code and message is returned</returns>
+    ''' <remarks></remarks>
+    Public Function initDataset(ByVal DatasetType As Integer) As Integer
+        Select Case DatasetType
+            Case 0 'all users report dataset
+                'checking if the dataset has this table already, and if true, we will dispose the current table and create the new one below:
+                Try
+                    ' the table is already existing and we will remove it now
+                    GlobalDataset.Tables.Remove(AllUsersReport_Dataset_Table)
+                Catch ex As Exception
+                    'the table was not found, so we will create a new one inside the database
+                    With AllUsersReport_Dataset_Table.Columns
+                        .Add(AllUsersReport_Dataset_Table_ID)
+                        .Add(AllUsersReport_Dataset_Table_IPAddr)
+                        .Add(AllUsersReport_Dataset_Table_DevName)
+                        .Add(AllUsersReport_Dataset_Table_DLUsage)
+                        .Add(AllUsersReport_Dataset_Table_PktDL)
+                        .Add(AllUsersReport_Dataset_Table_UPUsage)
+                        .Add(AllUsersReport_Dataset_Table_PktUP)
+                        .Add(AllUsersReport_Dataset_Table_Percentage)
+                    End With
+                    GlobalDataset.Tables.Add(AllUsersReport_Dataset_Table)
+                End Try
+        End Select
+        Return 0
+    End Function
+
+    ''' <summary>
+    ''' A function to format the supploed number and return it with a formation of readable number
+    ''' </summary>
+    ''' <param name="Number">The number we want to format it as integer</param>
+    ''' <returns>Formatted value of the number we supplied</returns>
+    ''' <remarks></remarks>
+    Public Function numberFormat(ByVal Number As Integer) As Integer
+        Return FormatNumber(Number, 0, TriState.True, TriState.True, TriState.True)
+    End Function
+
+    ''' <summary>
+    ''' A function to format the supploed number and return it with a formation of readable number
+    ''' </summary>
+    ''' <param name="Number">The number we want to format it as integer</param>
+    ''' <param name="Decimals">The number of decimal numbers after the decimal separator</param>
+    ''' <returns>Formatted value of the number we supplied</returns>
+    ''' <remarks></remarks>
+    Public Function numberFormat(ByVal Number As Double, ByVal Decimals As Integer) As Double
+        Return FormatNumber(Number, Decimals, TriState.True, TriState.True, TriState.True)
     End Function
 End Class

@@ -105,6 +105,10 @@
     <Compile Include="Classes\FullReportGridBuilder.vb" />
     <Compile Include="Classes\Globals.vb" />
     <Compile Include="Classes\Global_Functions.vb" />
+    <Compile Include="Classes\PrintClass.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\SQLCalls.vb" />
     <Compile Include="Forms\frmDBConnect.Designer.vb">
       <DependentUpon>frmDBConnect.vb</DependentUpon>
     </Compile>
@@ -122,6 +126,12 @@
       <DependentUpon>frmOverAllReport.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmOverAllReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPrintPreview.Designer.vb">
+      <DependentUpon>frmPrintPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPrintPreview.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmReportResults.Designer.vb">
@@ -165,6 +175,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Classes\PrintClass.resx">
+      <DependentUpon>PrintClass.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDBConnect.resx">
       <DependentUpon>frmDBConnect.vb</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmOverAllReport.resx">
       <DependentUpon>frmOverAllReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPrintPreview.resx">
+      <DependentUpon>frmPrintPreview.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmReportResults.resx">
       <DependentUpon>frmReportResults.vb</DependentUpon>

@@ -13,8 +13,36 @@ Module Globals
     Public MT_IP As String 'the IP address of the mikrotik, this is used to get accounting data
     Public setupStatus As Boolean 'variable to store the status of setup screen
     '
+    'report data variables
+    Public reportHeadLine1 As String
+    Public reportHeadLine2 As String
+    Public reportHeadLine3 As String
+    Public reportHeadLine4 As String
+    Public reportHeaderDetailsLine1 As String
+    Public reportHeaderDetailsLine2 As String
+    Public reportHeaderDetailsLine3 As String
+    Public reportHeaderDetailsLine4 As String
+    Public reportHeaderDetailsLine5 As String
+    Public reportHeaderDetailsLine6 As String
+    Public reportHeaderDetailsLine7 As String
+    Public reportHeaderDetailsLine8 As String
+    Public printMode As Integer = 0 'defines the printing mode: 0=nothing, 1=single user report, 2=overall users report
+    '
     'global objects
-    Public AllUsersReport_Dataset As New DataSet 'a dataset object to store the data when we create a full users report
+    'global dataset objects
+    Public GlobalDataset As New DataSet("GlobalDataset") 'a dataset object to store the data in runtime
+    '
+    ' all users report dataset objects
+    Public AllUsersReport_Dataset_Table As New DataTable("allUsersReport_DSTab") 'the table which will hold the all users report columns, this is a member of the AllUsersReport_Dataset dataset
+    Public AllUsersReport_Dataset_Table_ID As New DataColumn("allUsersReport_DSTab_DSCol_ID") 'ID column
+    Public AllUsersReport_Dataset_Table_IPAddr As New DataColumn("allUsersReport_DSTab_DSCol_IPAddr") 'IP address column
+    Public AllUsersReport_Dataset_Table_DevName As New DataColumn("allUsersReport_DSTab_DSCol_DevName") 'device name column
+    Public AllUsersReport_Dataset_Table_DLUsage As New DataColumn("allUsersReport_DSTab_DSCol_DLUsage") 'download usage column
+    Public AllUsersReport_Dataset_Table_PktDL As New DataColumn("allUsersReport_DSTab_DSCol_PktDL") 'packets requested column
+    Public AllUsersReport_Dataset_Table_UPUsage As New DataColumn("allUsersReport_DSTab_DSCol_UPUsage") 'upload usage column
+    Public AllUsersReport_Dataset_Table_PktUP As New DataColumn("allUsersReport_DSTab_DSCol_PktUP") 'packets sent column
+    Public AllUsersReport_Dataset_Table_Percentage As New DataColumn("allUsersReport_DSTab_DSCol_Percentage") 'total usage percentage column
+    '
     '
     'configuration file contents
     Public Config_Dir As String = Application.StartupPath & "\config" 'variable to store the location of the configuration directory
