@@ -9,7 +9,7 @@ Current version: 0.0.3a - Download from "release" on top of the page
 * GUI: We can now have a full user report viewed from the menu: Reports -> Single user reports -> View single user report.
 * GUI: Added chart controls to make reports more convenient, but will need more testing and work on it.
 
-The idea of this software will be: "decentralization"... nothing should be located in one place... information should be accessed from anywhere anytime... that's what I will try to achieve with this application.
+The idea of this software will be: "decentralization"... nothing should be located in one place... information should be accessed from anywhere anytime... that's what I will try to achieve with this application.  
 This software is aiming to fulfil all the requirements from such application, I have seen many applications like this, but each one is having a major disadvantage, such as limited in reporting functionality, or being cache based software (meaning you need to MANUALLY import the logs from the Mikrotik device EVERYDAY), or being a Linux dependent only, or also being a central application, where it can only be ran from one location everytime…
 
 The idea of this software will try to fix all the above (and many other) issues, so we will have:
