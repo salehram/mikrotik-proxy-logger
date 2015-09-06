@@ -12,6 +12,8 @@ Module Globals
     Public DB_Servers_List As New DataSet 'a variable dataset to store the sql servers list from the network
     Public MT_IP As String 'the IP address of the mikrotik, this is used to get accounting data
     Public setupStatus As Boolean 'variable to store the status of setup screen
+    Public AppStartDir As String = Application.StartupPath 'application startup path
+    Public AppReportsDir As String = Application.StartupPath & "\Reports" 'the reports directory of the application
     '
     'report data variables
     Public reportHeadLine1 As String

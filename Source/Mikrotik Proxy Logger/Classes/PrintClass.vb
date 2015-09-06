@@ -16,6 +16,7 @@ Public Class PrintClass
     Dim verticalLocation As Integer = 340 + 55
     Dim rowsCount As Integer = 0
     Dim currentRow As Integer = 0
+    Dim FooterText As String
 
     Private Sub Print_BeginPrint(sender As Object, e As PrintEventArgs) Handles Me.BeginPrint
         '
@@ -44,9 +45,9 @@ START:
                 'report headers lines
                 If currentPage = 0 Then 'printing the header on the first page only
                     e.Graphics.DrawString("Single User Report", HeaderFont, Brushes.Black, 60, 40 + extraVerticalMargin)
-                    e.Graphics.DrawString("Target: " & reportHeadLine1, HeaderFont, Brushes.Black, 60, 60 + extraVerticalMargin)
-                    e.Graphics.DrawString("Time range: " & reportHeadLine2, HeaderFont, Brushes.Black, 60, 80 + extraVerticalMargin)
-                    e.Graphics.DrawString("Usage stats:", HeaderFont, Brushes.Black, 60, 120 + extraVerticalMargin)
+                    e.Graphics.DrawString(reportHeadLine1, HeaderFont, Brushes.Black, 60, 60 + extraVerticalMargin)
+                    e.Graphics.DrawString(reportHeadLine2, HeaderFont, Brushes.Black, 60, 80 + extraVerticalMargin)
+                    e.Graphics.DrawString(reportHeadLine3, HeaderFont, Brushes.Black, 60, 120 + extraVerticalMargin)
                     e.Graphics.DrawString(reportHeaderDetailsLine1, HeaderFont, Brushes.Black, 60, 140 + extraVerticalMargin)
                     e.Graphics.DrawString(reportHeaderDetailsLine2, HeaderFont, Brushes.Black, 60, 160 + extraVerticalMargin)
                     e.Graphics.DrawString(reportHeaderDetailsLine3, HeaderFont, Brushes.Black, 60, 180 + extraVerticalMargin)
@@ -75,7 +76,7 @@ START:
                             '
                             'footer
                             e.Graphics.DrawLine(Pens.Black, 40, verticalLocation + 110, 600, verticalLocation + 110)
-                            Dim FooterText As String = "Single User Report" & " - Target: " & reportHeadLine1 & " - Time range: " & reportHeadLine2
+                            FooterText = "Single User Report" & " - Target: " & reportHeadLine1 & " - Time range: " & reportHeadLine2
                             e.Graphics.DrawString(FooterText, FooterFont, Brushes.Black, 40, verticalLocation + 120)
                             '
                             'end of footer
@@ -95,6 +96,17 @@ START:
                         currentRow = currentRow + 1
                         verticalLocation = verticalLocation + 55
                     Loop Until currentRow = rowsCount - 1
+                    If currentRow = rowsCount - 1 Then
+                        '
+                        'adding the footer on the last page as well:
+                        '
+                        'footer
+                        e.Graphics.DrawLine(Pens.Black, 40, verticalLocation + 110, 600, verticalLocation + 110)
+                        FooterText = "Single User Report" & " - Target: " & reportHeadLine1 & " - Time range: " & reportHeadLine2
+                        e.Graphics.DrawString(FooterText, FooterFont, Brushes.Black, 40, verticalLocation + 120)
+                        '
+                        'end of footer
+                    End If
                 End If
             Case 2 'overall report
 

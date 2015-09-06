@@ -102,6 +102,7 @@
     <Compile Include="Classes\CheckPrereqs.vb" />
     <Compile Include="Classes\CheckService.vb" />
     <Compile Include="Classes\DBOperations.vb" />
+    <Compile Include="Classes\ExportCSV.vb" />
     <Compile Include="Classes\FullReportGridBuilder.vb" />
     <Compile Include="Classes\Globals.vb" />
     <Compile Include="Classes\Global_Functions.vb" />

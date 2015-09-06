@@ -147,6 +147,9 @@ Public Class frmSingleUserReport_Config
                     ' generating the chart
                     CreateChart1()
                     '
+                    'showing the number of the total requests by user
+                    frmViewReport.lblTotalRequests.Text = FormatNumber(frmViewReport.dgReportMain.Rows.Count, 0, TriState.False, TriState.False, TriState.False)
+                    '
                     ' finally showing the report form
                     frmViewReport.MdiParent = frmMain
                     frmViewReport.Show()

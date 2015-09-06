@@ -55,14 +55,14 @@ Partial Class frmMain
         Me.ViewRawDataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripSeparator()
         Me.GenerateOneTimeReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GenerateCustomReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.OpenSavedReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.mm_Help = New System.Windows.Forms.ToolStripMenuItem()
         Me.HowToSetupToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ServiceController1 = New System.ServiceProcess.ServiceController()
-        Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripSeparator()
-        Me.OpenSavedReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GenerateCustomReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -85,7 +85,7 @@ Partial Class frmMain
         'slbl_SERVICE_STATUS
         '
         Me.slbl_SERVICE_STATUS.Name = "slbl_SERVICE_STATUS"
-        Me.slbl_SERVICE_STATUS.Size = New System.Drawing.Size(128, 17)
+        Me.slbl_SERVICE_STATUS.Size = New System.Drawing.Size(126, 17)
         Me.slbl_SERVICE_STATUS.Text = "[slbl_SERVICE_STATUS]"
         '
         'ToolStripSplitButton1
@@ -226,7 +226,7 @@ Partial Class frmMain
         '
         Me.SingleUserReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.smSingleUserReport, Me.GenerateSingleUserReportToolStripMenuItem, Me.ToolStripMenuItem6, Me.smOverallReport})
         Me.SingleUserReportsToolStripMenuItem.Name = "SingleUserReportsToolStripMenuItem"
-        Me.SingleUserReportsToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
+        Me.SingleUserReportsToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
         Me.SingleUserReportsToolStripMenuItem.Text = "Predefined reports"
         '
         'smSingleUserReport
@@ -255,24 +255,41 @@ Partial Class frmMain
         'ToolStripMenuItem4
         '
         Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(203, 6)
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(232, 6)
         '
         'ViewRawDataToolStripMenuItem
         '
         Me.ViewRawDataToolStripMenuItem.Name = "ViewRawDataToolStripMenuItem"
-        Me.ViewRawDataToolStripMenuItem.Size = New System.Drawing.Size(206, 22)
+        Me.ViewRawDataToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
         Me.ViewRawDataToolStripMenuItem.Text = "View raw data"
         '
         'ToolStripMenuItem3
         '
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(203, 6)
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(232, 6)
         '
         'GenerateOneTimeReportToolStripMenuItem
         '
         Me.GenerateOneTimeReportToolStripMenuItem.Name = "GenerateOneTimeReportToolStripMenuItem"
         Me.GenerateOneTimeReportToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
         Me.GenerateOneTimeReportToolStripMenuItem.Text = "Generate/view one time report"
+        '
+        'GenerateCustomReportToolStripMenuItem
+        '
+        Me.GenerateCustomReportToolStripMenuItem.Name = "GenerateCustomReportToolStripMenuItem"
+        Me.GenerateCustomReportToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
+        Me.GenerateCustomReportToolStripMenuItem.Text = "Generate/view custom report"
+        '
+        'ToolStripMenuItem7
+        '
+        Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
+        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(232, 6)
+        '
+        'OpenSavedReportToolStripMenuItem
+        '
+        Me.OpenSavedReportToolStripMenuItem.Name = "OpenSavedReportToolStripMenuItem"
+        Me.OpenSavedReportToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
+        Me.OpenSavedReportToolStripMenuItem.Text = "Open saved report"
         '
         'mm_Help
         '
@@ -297,23 +314,6 @@ Partial Class frmMain
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(145, 22)
         Me.AboutToolStripMenuItem.Text = "About"
-        '
-        'ToolStripMenuItem7
-        '
-        Me.ToolStripMenuItem7.Name = "ToolStripMenuItem7"
-        Me.ToolStripMenuItem7.Size = New System.Drawing.Size(232, 6)
-        '
-        'OpenSavedReportToolStripMenuItem
-        '
-        Me.OpenSavedReportToolStripMenuItem.Name = "OpenSavedReportToolStripMenuItem"
-        Me.OpenSavedReportToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
-        Me.OpenSavedReportToolStripMenuItem.Text = "Open saved report"
-        '
-        'GenerateCustomReportToolStripMenuItem
-        '
-        Me.GenerateCustomReportToolStripMenuItem.Name = "GenerateCustomReportToolStripMenuItem"
-        Me.GenerateCustomReportToolStripMenuItem.Size = New System.Drawing.Size(235, 22)
-        Me.GenerateCustomReportToolStripMenuItem.Text = "Generate/view custom report"
         '
         'frmMain
         '

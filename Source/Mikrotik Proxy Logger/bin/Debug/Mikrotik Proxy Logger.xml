@@ -74,6 +74,12 @@ MikrotikProxyLogger
  </summary>
 	<returns>0 for success, -1 for failure</returns>
 	<remarks></remarks>
+</member><member name="M:Mikrotik_Proxy_Logger.ExportCSV.ExportTXT(System.Int32)">
+	<summary>
+ Function to export data to CSV
+ </summary>
+	<param name="ContentType">Content type: 1=Single user report, 2=Overall report</param>
+	<remarks>Returns a message box with question to open the file if export succeeded</remarks>
 </member><member name="P:Mikrotik_Proxy_Logger.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.

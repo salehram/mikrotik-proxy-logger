@@ -44,7 +44,7 @@ Partial Class frmViewReport
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnPrint = New System.Windows.Forms.Button()
-        Me.btnExport = New System.Windows.Forms.Button()
+        Me.btnExportCSV = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -63,6 +63,8 @@ Partial Class frmViewReport
         Me.Label15 = New System.Windows.Forms.Label()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.printConfig = New System.Windows.Forms.PrintDialog()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.lblTotalRequests = New System.Windows.Forms.Label()
         CType(Me.dgReportMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -258,15 +260,15 @@ Partial Class frmViewReport
         Me.btnPrint.Text = "Print"
         Me.btnPrint.UseVisualStyleBackColor = True
         '
-        'btnExport
+        'btnExportCSV
         '
-        Me.btnExport.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.btnExport.Location = New System.Drawing.Point(567, 43)
-        Me.btnExport.Name = "btnExport"
-        Me.btnExport.Size = New System.Drawing.Size(140, 26)
-        Me.btnExport.TabIndex = 11
-        Me.btnExport.Text = "Export"
-        Me.btnExport.UseVisualStyleBackColor = True
+        Me.btnExportCSV.Font = New System.Drawing.Font("Tahoma", 12.0!)
+        Me.btnExportCSV.Location = New System.Drawing.Point(567, 43)
+        Me.btnExportCSV.Name = "btnExportCSV"
+        Me.btnExportCSV.Size = New System.Drawing.Size(140, 26)
+        Me.btnExportCSV.TabIndex = 11
+        Me.btnExportCSV.Text = "Export to Text"
+        Me.btnExportCSV.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -426,11 +428,33 @@ Partial Class frmViewReport
         '
         Me.printConfig.UseEXDialog = True
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Tahoma", 12.0!)
+        Me.Label9.Location = New System.Drawing.Point(264, 53)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(119, 19)
+        Me.Label9.TabIndex = 29
+        Me.Label9.Text = "Total Requests:"
+        '
+        'lblTotalRequests
+        '
+        Me.lblTotalRequests.AutoSize = True
+        Me.lblTotalRequests.Font = New System.Drawing.Font("Tahoma", 12.0!)
+        Me.lblTotalRequests.Location = New System.Drawing.Point(389, 53)
+        Me.lblTotalRequests.Name = "lblTotalRequests"
+        Me.lblTotalRequests.Size = New System.Drawing.Size(125, 19)
+        Me.lblTotalRequests.TabIndex = 30
+        Me.lblTotalRequests.Text = "lblTotalRequests"
+        '
         'frmViewReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(719, 684)
+        Me.Controls.Add(Me.lblTotalRequests)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.lblUPBWPackets)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.lblUPDWUsage)
@@ -447,7 +471,7 @@ Partial Class frmViewReport
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.btnExport)
+        Me.Controls.Add(Me.btnExportCSV)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -478,7 +502,7 @@ Partial Class frmViewReport
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents btnPrint As System.Windows.Forms.Button
-    Friend WithEvents btnExport As System.Windows.Forms.Button
+    Friend WithEvents btnExportCSV As System.Windows.Forms.Button
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
@@ -507,4 +531,6 @@ Partial Class frmViewReport
     Friend WithEvents dg_col_flag As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents PrintPreviewDialog1 As System.Windows.Forms.PrintPreviewDialog
     Friend WithEvents printConfig As System.Windows.Forms.PrintDialog
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents lblTotalRequests As System.Windows.Forms.Label
 End Class
