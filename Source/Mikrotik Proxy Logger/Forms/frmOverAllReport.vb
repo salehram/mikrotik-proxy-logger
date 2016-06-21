@@ -63,6 +63,7 @@ Public Class frmOverAllReport
                 Dim allUsageCount As Int64
                 Dim userUsageCount As Int64
                 Dim otherData As String()
+                Dim percentCol As DataView
                 '
                 '
                 '
@@ -125,7 +126,6 @@ Public Class frmOverAllReport
                             Loop
                         End If
                     Else 'here we will select the data from the table with the specified date/time range
-                        'sqlCMD = New SqlCommand("select * from mtpl_table1 where logdatetime between '" & fromDate & "' and '" & toDate & "'", sqlConnection)
                         sqlCMD = New SqlCommand("select * from mtpl_hosts", sqlConnection)
                         sqlDBReader = sqlCMD.ExecuteReader
                         If sqlDBReader.HasRows = True Then
@@ -155,14 +155,20 @@ Public Class frmOverAllReport
                                 End With
                                 'adding the data to the dataset row
                                 With GlobalDataset.Tables(AllUsersReport_Dataset_Table.TableName).Rows
-                                    .Add(CellID, CellIPAddr, CellDevName, CellDLUsage, CellPktDL, CellUPUsage, CellPktUp, CellPercent)
+                                    .Add(CellID, CellIPAddr, CellDevName, CellDLUsage, CellPktDL, CellUPUsage, CellPktUp, FormatNumber(CellPercent, 2, TriState.True, TriState.False, TriState.True))
                                 End With
                             Loop
                         End If
                     End If
                     '
-                    ' assigning the dataset to the datagrid view in the report form
+                    'building the datagrid view based on the data we provided
                     ReportGridBuilder.buildColumns(0)
+                    '
+                    'sorting the rows based on the percentage of usage
+                    percentCol = GlobalDataset.Tables("allUsersReport_DSTab").DefaultView
+                    percentCol.Sort = "allUsersReport_DSTab_DSCol_Percentage"
+                    '
+                    ' assigning the dataset to the datagrid view in the report form
                     frmReportResults.dgReportResult.DataSource = GlobalDataset.Tables(AllUsersReport_Dataset_Table.TableName)
                     '
                     'formating the grid with readable numbers:
@@ -174,7 +180,7 @@ Public Class frmOverAllReport
                     sqlConnection = Nothing
                     Me.Dispose()
                 Catch ex As Exception
-                    GF.ShowMsg(2, ERR010_btnGenerateReport_Click_BuildDataset(0), ERR010_btnGenerateReport_Click_BuildDataset(1) & vbCrLf & vbCrLf & ex.Message, ERR010_btnGenerateReport_Click_BuildDataset(2), 1)
+                    GF.ShowMsg(2, ERR010_btnGenerateReport_Click_BuildDataset(0), ERR010_btnGenerateReport_Click_BuildDataset(1) & vbCrLf & vbCrLf & ex.Source & vbCrLf & vbCrLf & ex.Message, ERR010_btnGenerateReport_Click_BuildDataset(2), 1)
                     sqlConnection.Close()
                     sqlConnection = Nothing
                 End Try

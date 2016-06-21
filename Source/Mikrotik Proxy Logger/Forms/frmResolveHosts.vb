@@ -78,9 +78,14 @@ Public Class frmResolveHosts
         Else
             'we have data in grid...
             Do
-                host = Dns.GetHostEntry(Trim(dgHostsGrid.Rows(counter).Cells(1).Value))
-                dgHostsGrid.Rows(counter).Cells(2).Value = host.HostName
-                counter = counter + 1
+                Try
+                    host = Dns.GetHostEntry(Trim(dgHostsGrid.Rows(counter).Cells(1).Value))
+                    dgHostsGrid.Rows(counter).Cells(2).Value = host.HostName
+                    counter = counter + 1
+                Catch ex As Exception
+                    ' do nothing in the case of a resolve error
+                    counter = counter + 1
+                End Try
             Loop While counter <= dgRows - 1
         End If
     End Sub

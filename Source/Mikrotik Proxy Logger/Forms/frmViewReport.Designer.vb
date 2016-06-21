@@ -44,7 +44,7 @@ Partial Class frmViewReport
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnPrint = New System.Windows.Forms.Button()
-        Me.btnExportCSV = New System.Windows.Forms.Button()
+        Me.btnExportTXT = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -260,15 +260,15 @@ Partial Class frmViewReport
         Me.btnPrint.Text = "Print"
         Me.btnPrint.UseVisualStyleBackColor = True
         '
-        'btnExportCSV
+        'btnExportTXT
         '
-        Me.btnExportCSV.Font = New System.Drawing.Font("Tahoma", 12.0!)
-        Me.btnExportCSV.Location = New System.Drawing.Point(567, 43)
-        Me.btnExportCSV.Name = "btnExportCSV"
-        Me.btnExportCSV.Size = New System.Drawing.Size(140, 26)
-        Me.btnExportCSV.TabIndex = 11
-        Me.btnExportCSV.Text = "Export to Text"
-        Me.btnExportCSV.UseVisualStyleBackColor = True
+        Me.btnExportTXT.Font = New System.Drawing.Font("Tahoma", 12.0!)
+        Me.btnExportTXT.Location = New System.Drawing.Point(567, 43)
+        Me.btnExportTXT.Name = "btnExportTXT"
+        Me.btnExportTXT.Size = New System.Drawing.Size(140, 26)
+        Me.btnExportTXT.TabIndex = 11
+        Me.btnExportTXT.Text = "Export to Text"
+        Me.btnExportTXT.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -471,7 +471,7 @@ Partial Class frmViewReport
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.btnExportCSV)
+        Me.Controls.Add(Me.btnExportTXT)
         Me.Controls.Add(Me.btnPrint)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -502,7 +502,7 @@ Partial Class frmViewReport
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents btnPrint As System.Windows.Forms.Button
-    Friend WithEvents btnExportCSV As System.Windows.Forms.Button
+    Friend WithEvents btnExportTXT As System.Windows.Forms.Button
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label

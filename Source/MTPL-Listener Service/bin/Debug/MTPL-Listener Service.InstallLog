@@ -11,3 +11,16 @@ Affected parameters are:
    logtoconsole = 
    logfile = C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\bin\Debug\MTPL-Listener Service.InstallLog
    assemblypath = C:\Users\SEHome\Google Drive\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\bin\Debug\MTPL-Listener Service.exe
+Installing assembly 'C:\Users\SalehRam\Google Drive\My Projects\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\bin\Debug\MTPL-Listener Service.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\SalehRam\Google Drive\My Projects\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\bin\Debug\MTPL-Listener Service.InstallLog
+   assemblypath = C:\Users\SalehRam\Google Drive\My Projects\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\bin\Debug\MTPL-Listener Service.exe
+Installing service MTPL-Listener...
+Service MTPL-Listener has been successfully installed.
+Creating EventLog source MTPL-Listener in log Application...
+Committing assembly 'C:\Users\SalehRam\Google Drive\My Projects\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\bin\Debug\MTPL-Listener Service.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\Users\SalehRam\Google Drive\My Projects\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\bin\Debug\MTPL-Listener Service.InstallLog
+   assemblypath = C:\Users\SalehRam\Google Drive\My Projects\VB.NET Projects\Mikrotik Proxy Logger\Mikrotik Proxy Logger\MTPL-Listener Service\bin\Debug\MTPL-Listener Service.exe

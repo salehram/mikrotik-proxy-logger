@@ -2,7 +2,7 @@
 
 Public Class frmViewReport
     Dim prepareReport As New PrintClass
-    Dim ExportCSV As New ExportCSV
+    Dim ExportText As New ExportData
 
     Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
         '
@@ -24,13 +24,13 @@ Public Class frmViewReport
         PrintPreviewDialog1.Show()
     End Sub
 
-    Private Sub btnExportCSV_Click(sender As Object, e As EventArgs) Handles btnExportCSV.Click
+    Private Sub btnExportTXT_Click(sender As Object, e As EventArgs) Handles btnExportTXT.Click
         '
         'calling the assign report headers sub procedure, which will fill the header lines for the report
         AssignReportHeaders()
         '
         'calling the export to csv sub procedure with content type = 1 as a single user report operation
-        ExportCSV.ExportTXT(1)
+        ExportText.ExportTXT(1)
     End Sub
 
     Private Sub AssignReportHeaders()

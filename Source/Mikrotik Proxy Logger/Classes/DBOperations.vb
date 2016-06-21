@@ -37,7 +37,7 @@ Public Class DBOperations
             sqlCmd.CommandText = sqlStr
             sqlCmd.ExecuteNonQuery()
         Catch ex As Exception
-            GF.ShowMsg(2, ERR005_buildDB(0), ERR005_buildDB(1) & ex.Message, ERR005_buildDB(2), 1)
+            GF.ShowMsg(2, ERR005_buildDB(0), ERR005_buildDB(1) & ex.Message & vbCrLf & vbCrLf & "Connection string was: " & connectionString, ERR005_buildDB(2), 1)
         End Try
         sqlConnection.Close()
         sqlConnection = Nothing

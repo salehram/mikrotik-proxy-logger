@@ -1,0 +1,36 @@
+Mikrotik Proxy Logger
+Single User Report
+Target: 192.168.5.242 - DESKTOP-7LAG4JD
+Time range: From: 3/27/2016 10:12:23 PM to: 3/28/2016 10:12:23 PM
+Usage stats:
+User download usage (mb): 24.39 mb
+Packets requested by user: 29,765.00
+User upload usage (mb): 26,236.00
+Packets sent by user: 26,236.00
+Total download utilizatin (mb): 31.29 mb
+Total Packets requested: 70,081.00
+Bandwidth usage percentage: 77.94
+Packets usage percentage: 42.47
+3/28/2016 10:11:16 PM	allow	http://go.microsoft.com/fwlink/?LinkID=252669&clcid=0x409
+3/28/2016 10:11:17 PM	allow	http://dmd.metaservices.microsoft.com/dms/metadata.svc
+3/28/2016 10:11:17 PM	allow	http://go.microsoft.com/fwlink/?LinkID=252669&clcid=0x409
+3/28/2016 10:11:17 PM	allow	http://dmd.metaservices.microsoft.com/dms/metadata.svc
+3/28/2016 10:11:18 PM	allow	http://go.microsoft.com/fwlink/?LinkID=252669&clcid=0x409
+3/28/2016 10:11:18 PM	allow	http://dmd.metaservices.microsoft.com/dms/metadata.svc
+3/28/2016 10:11:19 PM	allow	http://go.microsoft.com/fwlink/?LinkID=252669&clcid=0x409
+3/28/2016 10:11:19 PM	allow	http://dmd.metaservices.microsoft.com/dms/metadata.svc
+3/28/2016 10:11:20 PM	allow	http://go.microsoft.com/fwlink/?LinkID=252669&clcid=0x409
+3/28/2016 10:11:20 PM	allow	http://dmd.metaservices.microsoft.com/dms/metadata.svc
+3/28/2016 10:11:20 PM	allow	http://go.microsoft.com/fwlink/?LinkID=252669&clcid=0x409
+3/28/2016 10:11:21 PM	allow	http://dmd.metaservices.microsoft.com/dms/metadata.svc
+3/28/2016 10:11:21 PM	allow	http://go.microsoft.com/fwlink/?LinkID=252669&clcid=0x409
+3/28/2016 10:11:21 PM	allow	http://dmd.metaservices.microsoft.com/dms/metadata.svc
+3/28/2016 10:11:22 PM	allow	http://go.microsoft.com/fwlink/?LinkID=252669&clcid=0x409
+3/28/2016 10:11:22 PM	allow	http://dmd.metaservices.microsoft.com/dms/metadata.svc
+3/28/2016 10:12:21 PM	allow	http://go.microsoft.com/fwlink/?LinkID=252669&clcid=0x409
+3/28/2016 10:12:21 PM	allow	http://dmd.metaservices.microsoft.com/dms/metadata.svc
+3/28/2016 10:12:22 PM	allow	http://go.microsoft.com/fwlink/?LinkID=252669&clcid=0x409
+3/28/2016 10:12:22 PM	allow	http://dmd.metaservices.microsoft.com/dms/metadata.svc
+3/28/2016 10:12:23 PM	allow	http://go.microsoft.com/fwlink/?LinkID=252669&clcid=0x409
+3/28/2016 10:12:23 PM	allow	http://dmd.metaservices.microsoft.com/dms/metadata.svc
+3/28/2016 10:12:23 PM	allow	http://go.microsoft.com/fwlink/?LinkID=252669&clcid=0x409

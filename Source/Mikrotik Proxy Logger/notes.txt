@@ -12,7 +12,9 @@ for accounting data:
 features to be added:
 - most used protocols (http, ftp...)
 - most used content type (jpeg, exe, zip...)
-
+- a new service to handle report generation based on selected time schedules
+- a regex function to analyze the requested URLs and store the main parts of the domain string, so we can use this to calculate the most visited domains
+- 
 
 
 

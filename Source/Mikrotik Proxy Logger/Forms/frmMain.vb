@@ -10,7 +10,8 @@ Public Class frmMain
     Dim CheckPrereqs As New CheckPrereqs
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        slbl_DB_SVR_NAME.Text = "Not connected"
+        'slbl_DB_SVR_NAME.Text = "Not connected"
+        slbl_DB_SVR_NAME.Text = ""
         slbl_DB_SVR_NAME.ForeColor = Color.Red
         CheckService.serviceStatus() 'checking service status
         If CheckPrereqs.checkConfig = 0 Then 'checking if the configuration has been done or not

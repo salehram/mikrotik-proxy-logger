@@ -1,0 +1,14 @@
+Mikrotik Proxy Logger
+Single User Report
+Target: 192.168.5.221 - 192.168.5.221
+Time range: From: 3/27/2016 10:26:34 PM to: 3/28/2016 10:26:34 PM
+Usage stats:
+User download usage (mb): 3.26 mb
+Packets requested by user: 4,193.00
+User upload usage (mb): 4,234.00
+Packets sent by user: 4,234.00
+Total download utilizatin (mb): 38.51 mb
+Total Packets requested: 88,921.00
+Bandwidth usage percentage: 8.45
+Packets usage percentage: 4.72
+3/28/2016 10:12:48 PM	allow	http://igcdn-photos-h-a.akamaihd.net/hphotos-ak-xap1/t51.2885-15/e35/11931216_1578761029105839_1897936134_n.jpg
