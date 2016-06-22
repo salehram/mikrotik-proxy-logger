@@ -164,6 +164,7 @@ Partial Class frmOverAllReport
         Me.btnExportCSV.TabIndex = 4
         Me.btnExportCSV.Text = "Export to CSV"
         Me.btnExportCSV.UseVisualStyleBackColor = True
+        Me.btnExportCSV.Visible = False
         '
         'btnExportExcel
         '
@@ -173,6 +174,7 @@ Partial Class frmOverAllReport
         Me.btnExportExcel.TabIndex = 5
         Me.btnExportExcel.Text = "Export to Excel"
         Me.btnExportExcel.UseVisualStyleBackColor = True
+        Me.btnExportExcel.Visible = False
         '
         'frmOverAllReport
         '

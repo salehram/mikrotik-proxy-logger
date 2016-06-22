@@ -173,6 +173,13 @@ Public Class frmOverAllReport
                     '
                     'formating the grid with readable numbers:
                     ReportGridBuilder.FormatGridNumbers()
+                    '
+                    'making sure the id column is hidden
+                    frmReportResults.dgReportResult.Columns(0).Visible = False
+                    '
+                    'building the overview report tab
+                    buildOverViewReport(frmReportResults.dgReportResult.Rows.Count)
+                    '
                     'showing the results form
                     frmReportResults.MdiParent = frmMain
                     frmReportResults.Show()
@@ -204,5 +211,50 @@ Public Class frmOverAllReport
             dtFrom.Enabled = True
             dtTo.Enabled = True
         End If
+    End Sub
+
+    Private Sub buildOverViewReport(ByVal gridCount As Integer)
+        'this will build the report in the overview tab
+        'it will use data from existing report in user activity tab
+        'and if it is required we will build new data
+        '
+        '
+        ' the way to get top 5 results:
+        ' loop on datagrid, read all percentage values
+        ' register the first value in variable
+        ' if we find a larger value we oevrwrite the old value
+        ' if we finished the first loop with the largest value, we will register its ID so we ignore it in the second loop
+        ' second loop we will do the same, but we will check the ID of each record to make sure we igonore the previous value
+        ' when we end the second loop, we wil register the ID of the second largest value along with the first one so we ignore both values
+        ' we do this for the remaining 3 loops
+        Dim top5Users(4, 2) As Double 'a 3 dim array to store 2 values in each record: {0=>index of row of highest value, 1=>id of row of highest value, 2=>the highest value we found}
+        Dim rowIDValue As Integer 'a variable to store the value of the ID cell in the row
+        Dim rowPercentValue As Double 'a variable to get the percentage value to compare it with other values to get the highest value
+        Dim rowIndex As Integer 'a variable to store the index of the row so we can add it to the grid later
+        Dim loopsCount As Integer = 5 'a counter to control the loops we want to make on the grid rows
+        Dim counter As Integer = 0 'a counter to be used in loops
+        For loopsCount = 0 To 4 Step +1
+            counter = 0 'resetting the counter for the new loop
+            Do
+                rowIndex = frmReportResults.dgReportResult.Rows(counter).Index
+                rowIDValue = frmReportResults.dgReportResult.Rows(counter).Cells(0).Value
+                rowPercentValue = frmReportResults.dgReportResult.Rows(counter).Cells(7).Value
+                ' comparing the top5Users position that holds the percentage value with the row's value
+                If top5Users(loopsCount, 2) < rowPercentValue Then
+                    'here the row value is larger than what we have in the array
+                    'now we will check if we have the ID of this row, if we find it we will ignore this row
+                    If CType(top5Users(loopsCount, 1), Integer) = rowIDValue Then
+                        'here we found the row ID, we will ignore this value as we already mapped it before
+                        'do nothing
+                    Else
+                        'here we did not find the ID, so this is a new value, we will record it and keep going
+                        top5Users(loopsCount, 0) = rowIndex
+                        top5Users(loopsCount, 1) = rowIDValue
+                        top5Users(loopsCount, 2) = rowPercentValue
+                    End If
+                End If
+                counter = counter + 1
+            Loop Until counter = gridCount - 1
+        Next
     End Sub
 End Class
